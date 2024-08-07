@@ -1,0 +1,54 @@
+"Note:Required. 
+First Name should be less than 30 characters and Alphabets only. 
+","Note:Required.
+ Last Name should be less than 30 characters and Alphabets only.
+","Note : Required.
+ This should be unique. Please enter a valid email id.","Note : Password is Required. Password must be greater than 4 characters
+","Note:DOB is Required. Date format should be dd-mm-yyyy. Age should be greater than 14.
+","Note:Required. Please enter value between 1 to 999
+","Note:Required. Please enter value between 1 to 999
+","Note:Bio is Required. Bio should be less than 250 characters.
+","Note: Nationality is Required
+","Note:Location (city, country) is Required. Location sholud be less than 50 characters.
+","Note : sport_id is required
+
+sport_id = 1 for Soccer
+sport_id = 2 for Basketball
+sport_id = 3 for Cricket
+sport_id = 4 for Volleyball
+sport_id = 5 for Rugby
+sport_id = 6 for Hockey
+
+For now By Default sport_id = 1
+","Note : preferred position is Required
+
+ 1  for Goalkeeper
+
+ 2  for Forward
+
+ 3  for Defender
+
+ 8  for Midfielder    ","Note : level_id is required
+
+
+level_id = 1 for Rookie
+level_id = 2 for Junior
+level_id = 3 for Professional
+"," 0 for NO Teams,
+ 1 for All Teams
+
+Note : By default 1.  Required *
+
+
+","
+
+0 for Nobody
+1 for Friends of Friends
+2 for Everybody
+
+Note : By default 2 . Required *","Note: Team Id:  Assigning Player to Team.
+Please enter a valid and correct Team id. "
+first_name,last_name,email,password,date_of_birth,height(cm),weight(kg),bio,Nationality,Location,sport_id,preferred_position,sport_level_id,accept_team_invite,accept_user_invite,team_id
+Test,player,test71plyr@gmail.com,dxdev@123,12-01-1989,178,76,Here is bio,India,"Mohali, India",1,2,2,1,2,"10, 60"
+Test,player,test81plyr@gmail.com,dxdev@123,18-11-1998,176,45,Here is bio,India,"Mohali, India",1,3,3,1,2,13
+Test,player,test91plyr@gmail.com,dxdev@123,29-12-2000,170,67,Here is bio,India,"Mohali, India",1,1,2,1,2,

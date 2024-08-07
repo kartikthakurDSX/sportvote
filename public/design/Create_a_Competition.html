@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SportVote</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;900&display=swap" rel="stylesheet">
+  
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+ <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+ <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+	
+
+</head>
+
+<body>
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar py-4 shadow" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="SportVote Logo">
+            </a>
+			
+          </div>
+		  <div class="search-bar ms-4"><form> <div class="input-group"><div class="input-group-btn "><button type="submit" name="search" class="btn icon-search"></button></div><input type="text" name="search" placeholder="search" class="form-control search-box"></div></form>
+		  
+		  </div>
+          <div class="ms-auto me-auto h-b-lr">
+            <nav class="site-navigation position-relative text-end" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                <li class="active"><a href="location.html" class="nav-link"><img src="images/team-icon-128.png" class="icon-np">Locate</a></li>
+                <li><a href="players.html" class="nav-link"><img src="images/team-icon-128.png" class="icon-np">My Team</a></li>
+				<li><a href="matches.html" class="nav-link"><img src="images/competitions-icon-128.png" class="icon-np">Competitions</a></li>
+				<li class="dropdown"><a class="nav-link dropdown-toggle round-icon" href="#" data-bs-toggle="dropdown"><i class="icon-plus "></i></a>
+					<ul class="dropdown-menu fade-down c-profile-nav">
+					  <li><a class="dropdown-item " href="#" ><span class="create"> Create</span><i class="icon-plus round-circle"></i></a></li>
+					  <li><a class="dropdown-item" href="Create_a_Competition.html"><img src="images/competitions-icon-128.png" alt="team-icon"> A Comptition </a></li>
+					   <li><a class="dropdown-item" href="Create_a_new_team.html"><img src="images/team-icon-128.png" alt="team-icon"> New Team</a></li> 
+					  <li><a class="dropdown-item" href="player_profile.html"><img src="images/noun_Fans.png" alt="team-icon"> Player Profile</a></li>					  
+					  <li><a class="dropdown-item" href="other_profile.html"><img src="images/noun_Fans.png" alt="team-icon"> Other Profile </a></li>
+					 					  
+					  
+					</ul>
+				</li>
+               
+              </ul>
+            </nav>
+			
+            
+          </div>
+		  <div class="ms-auto">
+		  <nav class="notification-icons text-end" role="navigation">
+				<ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+					<li><a href="" title="profile"><img src="images/person_5.jpg" alt="profile-images"class=""></a><span class="p_name">Kulbir Singh</span></li>
+                   <li><a href="" title="notification"><i class="icon-bell"></i><span class="badge">12</span></a></li>
+				   <li><a href=""><i class="icon-angle-down"></i></a></li>
+                </ul>
+				</nav>
+				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle  float-md-end"><span
+                class="icon-menu h3  text-black"></span></a>
+			</div>
+			
+        </div>
+    </div>
+   </header>
+ </div>
+	<div class="header-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1><span class="icon-noun-s icon-noun-circle noun_Trophy"></span>Create a <strong>Competition</strong></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+ 
+
+<main id="main">
+	<div class="container">
+        <div class="row">
+           <div class="col-lg-7 col-md-6 pe-0 ">
+		   <form class="" id="regForm1" action="thanks.html">
+			<div class="competition-list mb-3">
+				<ul class="games-list owl-4-slider owl-carousel">
+					<li class="item"><input type="radio" name="competition" value="soccer" checked id="soccer" onclick="divshowhide()"> <label for="competition">Soccer</label><i class="icon-check checked-badge"></i></li>
+					<li class="item"><input type="radio" name="competition" value="Basketball" id="Basketball" onclick="divshowhide()"> <label for="competition">Basketball</label><i class="icon-check checked-badge"></i></li>
+					<li class="item"><input type="radio" name="competition" value="Cricket" id="Cricket" onclick="divshowhide()"> <label for="competition">Cricket</label><i class="icon-check checked-badge"></i></li>
+					<li class="item"><input type="radio" name="competition" value="Volleyball" id="Volleyball" onclick="divshowhide()"> <label for="competition">Volleyball</label><i class="icon-check checked-badge"></i></li>
+					<li class="item"><input type="radio" name="competition" value="Rugby" id="Rugby" onclick="divshowhide()"> <label for="competition">Rugby</label><i class="icon-check checked-badge"></i></li>
+					<li class="item"><input type="radio" name="competition" value="Hockey" id="Hockey" onclick="divshowhide()"> <label for="competition">Hockey</label><i class="icon-check checked-badge"></i></li>
+				</ul>
+			</div>
+			<div class="soccer-form-data pe-2 selectt" id="soccer-form">
+  
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+	<div class="row mb-3">
+					<div class="col-md-6">
+                       <label class="visually-hidden" for="league_name">Korean Premier Leauge</label><input type="text" class="grey-form-control input-sm" placeholder="Korean Premier Leauge" id="league_name" name="league_name"> </div>
+					   <div class=" col-md-6">
+					   <label class="visually-hidden" for="browse_image">Drag and Drop or Browse</label><input type="file" class="grey-form-control browse-control input-sm" placeholder="Drag and Drop or Browse" id="browse_image" name="browse_image">
+                       </div>
+                   </div>
+                    <div class="row mb-3">
+					<!--<div class=" col-md-6">
+					   <label class="visually-hidden" for="location">Location</label><input type="text" class="grey-form-control location-icon input-sm" placeholder="South Corea" id="location" name="location">
+                       </div>-->
+					   <div class=" col-md-6">
+					   <div class="input-group ">
+							
+							<input type="text" class="form-control grey-bg input-sm" placeholder="South Corea" id="location" name="location">
+								<span class="input-group-text apicon"><i class="icon-map-marker"></i></span>
+							
+						</div>
+					</div>
+					<div class=" col-md-6"> 
+                       <label class="visually-hidden" for="c_date">Date</label><input type="date" class="grey-form-control input-sm" value="15 January 2022" id="c_date" name="c_date">
+                    </div>
+					</div>
+					<div class="row mb-3">
+						<div class=" col-sm-4 col-xs-4">
+							<div class="radio-competion-type">
+								<label for="one_off_game"><img src="images/trophy.png" alt="trophy"><span>One Off Game</span></label><input type="radio" name="c_type" value="One Off Game"  class="radio-fancy" id="one_off_game">
+							</div>
+						</div>
+						<div class=" col-sm-4 col-xs-4">
+							<div class="radio-competion-type">
+								<label for="knock_out"><img src="images/league.png" alt="trophy"><span>Knock Out Cup</span></label><input type="radio" name="c_type" value="Knock Out Cup"  class="radio-fancy" id="knock_out">
+							</div>
+						</div>
+						<div class=" col-sm-4 col-xs-4">
+							<div class="radio-competion-type">
+								<label for="type_league"><img src="images/football_league.png" alt="trophy"><span>League</span></label><input type="radio" name="c_type" value="League"  class="radio-fancy" id="type_league">
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class=" col-md-6">
+							<select class="form-control form-select-fancy-1" aria-label=".form-select-lg example" name="key_ranking"id="key_ranking">
+								  <option selected>W: Matches Won</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						</div>
+						<div class=" col-md-6">
+						
+							<select class="form-control form-select-fancy-1" aria-label=".form-select-lg example" name="key_ranking"id="key_ranking">
+								  <option selected>W: Matches Won</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+								
+						
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class=" col-md-6">
+							<select class="form-control form-select-fancy-1" aria-label=".form-select-lg example" name="key_ranking"id="key_ranking">
+								  <option selected>W: Matches Won</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						</div>
+						<div class=" col-md-6">
+							<select class="form-control form-select-fancy-1" aria-label=".form-select-lg example" name="key_ranking"id="key_ranking">
+								  <option selected>W: Matches Won</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						</div>
+
+					</div>
+					<div class="">
+						<textarea name="" class="form-control grey-form-control" id="" cols="30" rows="5" placeholder="Competition Intro or Welcome Message"></textarea>
+					  </div>
+  
+  </div>
+  <div class="tab">
+	<h4><strong>Step 2:</strong> Define League Table Stats & Ranking Mechanism</h4>
+				<div class="select-league-table round-check-box">
+					<h5>Select league table stats you would like to track</h5>
+					<div class="row mb-3 ">
+					<div class=" col"> 				
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Played">
+					  <label class="form-check-label" for="Played">
+						Played
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Matches_Won">
+					  <label class="form-check-label" for="Matches_Won">
+						Matches Won
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Matches_Lost">
+					  <label class="form-check-label" for="Matches_Lost">
+						Matches Lost
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Draws">
+					  <label class="form-check-label" for="Draws">
+						Draws
+					  </label>
+					</div>
+					</div>
+					<div class=" col"> 		
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Points">
+					  <label class="form-check-label" for="Points">
+						Points
+					  </label>
+					</div>					
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Goals_For">
+					  <label class="form-check-label" for="Goals_For">
+						Goals For
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Goals_Against">
+					  <label class="form-check-label" for="Goals_Against">
+						Goals Against
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="round-check-box" type="checkbox" value="" id="Goals_Difference" checked>
+					  <label class="form-check-label" for="Goals_Difference">
+						Goals Difference
+					  </label>
+					</div>
+					
+					</div>
+					</div>
+				</div>
+			
+			<div class="select_key_rank mt-2">
+			<div class="">
+			<label for="key_ranking">
+			Key Ranking determined by: </label>
+			<select class="form-select-fancy"  name="key_ranking" id="key_ranking">
+			  <option selected>W: Matches Won</option>
+			  <option value="1">One</option>
+			  <option value="2">Two</option>
+			  <option value="3">Three</option>
+			</select>
+			</div>	
+			<div class="">
+			<label for="key_ranking">
+			 2nd key Ranking mechanism: </label>
+			<select class="form-select-fancy" aria-label=".form-select-lg example" name="key_ranking"id="key_ranking">
+			  <option selected>W: Matches Won</option>
+			  <option value="1">One</option>
+			  <option value="2">Two</option>
+			  <option value="3">Three</option>
+			</select>
+			</div>	
+			<hr />
+			
+			<div class="">
+			<label for="key_ranking">
+			Top Player Ranking mechanism:</label>
+			<select class="form-select-fancy"  name="key_ranking"id="key_ranking">
+			  <option selected>W: Matches Won</option>
+			  <option value="1">One</option>
+			  <option value="2">Two</option>
+			  <option value="3">Three</option>
+			</select>
+			
+			</div>
+			<p class="note">*  Stats cannot be changed once chosen. Please choose carefully</p>
+			</div>
+  </div>
+  
+  <div class="d-grid gap-2 d-md-block mt-3">
+		
+      <button type="button" id="prevBtn" class="btn btn-default "   onclick="nextPrev(-1)">Cancel</button>
+      <button type="button" id="nextBtn" class="btn  btn-submit float-md-end" onclick="nextPrev(1)">Save</button>
+		
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;display:none;">
+    <span class="step"></span>
+    <span class="step"></span>
+
+  </div>
+
+
+			
+			
+            
+			
+			</div>
+			
+			
+			</form> 
+		   </div>
+		   <div class="col-lg-5 col-md-6 ps-0 pe-0">
+			<div class="show-content">
+				<div class="show-content-header">
+					 <div class="d-flex align-items-center ">
+					  <div class="game-logo">
+						 <img src="images/kano_pillers.png" alt="SportVote Logo" class="rounded-circle bg-white p-2">						
+					  </div>
+						<div class="ms-auto text-end">
+						<h2 class="header-name">Korean<br>premier leAGUE</h2>
+						<h5><span class="header_game">Soccer League</span> in Seoul, South Korea</h5>
+						
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="competition-detail pt-2">
+						<h5>Competition <span>League with Teams Play x2</span></h5>
+						<p>with <span>12 teams </span>having <span>20 players </span> each with <span>11 players </span>in starting linup</p>
+					</div>
+					<div class="report-deatil ">
+						<span class="report">Report: Detailed</span>
+						<span class="voting-time">Voting time: 5 mins</span>
+						<div class="clearfix"></div>
+						<p>
+						A premier competition in the region wen you work or browse at home.
+						You can use Chrome remote desktop, translate webpages, and switch
+						between user profiles. Here are some resources to help you You can
+						make the most of Chrome when you work or browse at home.</p>
+
+						<p>You can use Chrome remote desktop, translate webpages, and switch
+						between user profiles. 
+												</p>
+					</div>				
+			</div>
+		   </div>
+		</div>
+	</main>
+<footer class="footer-section">
+ <div class="container">
+        <div class="row">
+
+           <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Host Your Sport</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Soccer</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cricket</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hockey</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Basketball</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Rugby</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Volleyball</a></li>
+			  <hr>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Suggest a Sport</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Manage</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Your Sports Profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Your Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The Competitions</a></li>
+			</ul>
+			<br>
+			<h4>Find</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The right team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The Prime Players</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>About us</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Story</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Why Sports</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Partnerships</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Support</a></li>
+			  <hr>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Investors</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 col-md-6 widgets">
+           <div><form>
+			   <div class="input-group">
+					  <input type="email" class="form-control" placeholder="Email or Phone Number" name="email">
+					  <div class="input-group-btn ">
+						<button class="btn btn-submit-group" type="submit">Join Now</button>
+					  </div>
+					</div>
+		   </form>
+            </div>
+			<div class="social-chat">
+				<span class="letschat">Lets Chat: <a href="" alt="" title="letschat">hi@sportvote.org</a>     </span>
+				<ul class="social_icons"><li>Follow Us:</li><li><a href="#" title="facebook"><i class="icons icon-fb"></i></a></li><li><a href="#" title="twitter"><i class="icons icon-tw"></i></a></li><li><a href="#" title="linkedin"><i class="icons icon-li"></i></a></li><li><a href="#" title="Instagram"><i class="icons icon-insta"></i></a></li></ul>
+				<div class="clearfix"></div>
+			</div>
+          </div>
+		  </div>
+		  <div class="row ">
+			<div class="col-lg-12 text-center copyright">
+				Copyright 2021. All rights for Sportvote logo, marketing content & marketing graphics are reserved to Sportvote Inc.
+			</div>
+		  </div>
+		  </div>
+	
+</footer>
+
+ <script src="js/jquery-3.3.1.min.js"></script>
+ <script src="js/jquery-migrate-3.0.1.min.js"></script>
+ <script src="js/jquery.easing.1.3.js"></script>
+  <!--<script src="js/jquery-ui.js"></script>
+ 
+  
+    <script src="js/aos.js"></script>
+   <script src="js/script.js"></script> <script src="js/popper.min.js"></script>  
+   Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+   <script src="js/script.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/multi-step.js"></script>
+<script>
+
+</script>
+</body>
+
+</html>

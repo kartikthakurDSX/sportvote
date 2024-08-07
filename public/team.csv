@@ -1,0 +1,73 @@
+"Note:Sports is required
+sport_id = 1 for Soccer
+sport_id = 2 for Basketball
+sport_id = 3 for Cricket
+sport_id = 4 for Volleyball
+sport_id = 5 for Rugby
+sport_id = 6 for Hockey
+
+For now By default sport_id = 1","Note: 1. Team Name is required.
+2. Name should not be greater than 30 characters","Note: Team location(City) is Required.
+ Location should be less than 50 characters.","Note: 1) Home Ground name is required.
+ 2) Home Ground name should not be greater than 30 characters","Note : Home Groud location is required.
+ Location should be less than 50 characters.","Note: Country name is required.
+ Country should be valid",Note: Description should not be greater than 255 characters,"Note : Required in case of assigning Players.
+ This should be unique in case of unregistered Players. Please enter a valid email id.","Note:Required in case of unregistered Players. 
+First Name should be less than 30 characters and Alphabets only. 
+","Note:Required in case of unregistered Players.
+ Last Name should be less than 30 characters and Alphabets only.
+","Note : Password is Required in case of unregistered Players. Password must be greater than 4 characters
+","Note:DOB is Required in case of unregistered Players. Date format should be dd-mm-yyyy. Age should be greater than 14.
+","Note:Required in case of unregistered Players. Please enter value between 1 to 999
+","Note:Required in case of unregistered Players. Please enter value between 1 to 999
+","Note:Bio is Required in case of unregistered Players. Bio should be less than 250 characters.
+","Note: Nationality is Requiredin case of unregistered Players
+","Note:Location (city, country) is Required in case of unregistered Players. Location sholud be less than 50 characters.
+","Note : sport_id is required in case of unregistered Players
+
+sport_id = 1 for Soccer
+sport_id = 2 for Basketball
+sport_id = 3 for Cricket
+sport_id = 4 for Volleyball
+sport_id = 5 for Rugby
+sport_id = 6 for Hockey
+
+For now By Default sport_id = 1
+","Note : preferred position is Requiredin case of unregistered Players
+
+ 1  for Goalkeeper
+
+ 2  for Forward
+
+ 3  for Defender
+
+ 8  for Midfielder    ","Note: Please enter jersey number from 01 to 99.
+Please enter numbers only.","Note : level_id is required in case of unregistered Players
+
+
+level_id = 1 for Rookie
+level_id = 2 for Junior
+level_id = 3 for Professional
+"," 0 for NO Teams,
+ 1 for All Teams
+
+Note : By default 1.  Required * in case of unregistered Players
+
+
+","
+
+0 for Nobody
+1 for Friends of Friends
+2 for Everybody
+
+Note : By default 2 . Required * in case of unregistered Players"
+sport_id,name,location (City),homeGround,homeGround_location,country_name,description,email,first_name,last_name,password,date_of_birth,height(cm),weight(kg),bio,Nationality,Location,sport_id,preferred_position,jersey_no,sport_level_id,accept_team_invite,accept_user_invite
+1,New Team,mohali,Mohali,Mohali,india,description,,,,,,,,,,,,,,,,
+,,,,,,,newtest71plyr@gmail.com,,,,,,,,,,,,,,,
+,,,,,,,newtest11plyr@gmail.com,Test,player,dxdev@123,18-11-1998,176,45,Here is bio,India,"Mohali, India",1,3,22,3,1,2
+,,,,,,,newtest91plyr@gmail.com,,,,,,,,,,,,,,,
+1,New Team-22,chandigarh,chandigarh,punjab,india,description,,,,,,,,,,,,,,,,
+,,,,,,,testnew31plyr@gmail.com,Test,player,dxdev@123,12-01-1989,178,76,Here is bio,India,"Mohali, India",1,2,32,2,1,2
+,,,,,,,testnew41plyr@gmail.com,Test,player,dxdev@123,18-11-1998,176,45,Here is bio,India,"Mohali, India",1,3,44,3,1,2
+,,,,,,,testnew51plyr@gmail.com,Test,player,dxdev@123,29-12-2000,170,67,Here is bio,India,"Mohali, India",1,1,2,2,1,2
+1,New Team-23,mohali,Mohali,Mohali,india,description,,,,,,,,,,,,,,,,

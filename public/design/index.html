@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SportVote</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+ <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<body>
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar py-4 shadow" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="site-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="SportVote Logo">
+            </a>
+			
+          </div>
+		  <div class="search-bar ms-4"><form> <div class="input-group"><div class="input-group-btn "><button type="submit" name="search" class="btn icon-search"></button></div><input type="text" name="search" placeholder="search" class="form-control search-box"></div></form>
+		  
+		  </div>
+          <div class="ms-auto me-auto h-b-lr">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                <li class="active"><a href="index.html" class="nav-link"><img src="images/team-icon-128.png" class="icon-np">Pricing</a></li>
+                <li><a href="matches.html" class="nav-link"><img src="images/competitions-icon-128.png" class="icon-np">Competitions</a></li>
+                <li><a href="players.html" class="nav-link"><img src="images/team-icon-128.png" class="icon-np">Features</a></li>
+               
+              </ul>
+            </nav>
+			
+            
+          </div>
+		  <div class="ms-auto">
+		  <nav class="site-navigation position-relative text-right" role="navigation">
+				<ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                   <li><a class="btn btn-outline nav-link " data-bs-toggle="modal" data-bs-target="#joinModal"> Join Now</a></li>                </li>
+				   <li><a class="btn btn-pink nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In</a></li>
+                </ul>
+			</nav>
+				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle  float-md-end"><span
+                class="icon-menu h3  text-black"></span></a>
+			</div>
+			
+	<div id="loginModal" class="modal fade" role="dialog" aria-hidden="true">
+        <div class="modal-dialog shadow">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h4>Sign in</h4>
+            </div>
+            <div class="modal-body">
+                   
+				<form action="index-header2_afterlogin.html"> 
+                   
+				 
+                   <div class="row mb-3">
+                       <label class="visually-hidden" for="email">Enter Email/Phone Number</label><input type="text" class="form-control input-sm bb_textbox" placeholder="Enter Email/Phone Number" id="email" name="email">
+                       </div>
+                         <div class="row mb3">
+							<div class="form-check col"> 
+                            <input type="radio" class="form-check-input"  id="withpassword" name="password"> <label class="form-check-label" for="withpassword"> With Password</label></div>
+							<div class="col"> 
+							<input type="radio" class="form-check-input" id="withoutpassword" name="password"> <label class="form-check-label" for="withoutpassword"> Without Password</label></div>
+						</div>
+						<div class="row mb-3">
+                       <label class="visually-hidden" for="password">Enter Password</label><input type="password" class="form-control input-sm" placeholder="Enter Password" id="password" name="password">
+                       </div>
+						
+                     
+                    
+                      
+                        
+                       <button type="submit" class="btn  btn-submit ">Submit</button>
+                      
+					  
+					  
+                   
+                   
+                   
+                     
+               
+                    </form>
+            </div>
+<!--
+            <div class="modal-footer">
+                <div style="padding:10px"></div>
+            </div>
+-->
+        </div>
+        </div>
+    </div>
+  
+  <!-- join model-->
+  <div id="joinModal" class="modal fade" role="dialog">
+        <div class="modal-dialog shadow">
+        <div class="modal-content">
+            
+            <div class="modal-body">
+			 <section class="multi_step_form">  
+				<form id="msform" action="index-header2_afterlogin.html"> 
+                   <fieldset>
+					                
+					<div class="modal-header">                
+						<h4>Sign In</h4>
+					</div>
+                   <div class="mb-3">
+                       <label class="visually-hidden" for="email">Enter Email/Phone Number</label><input type="text" class="form-control input-sm bb_textbox" placeholder="Enter Email/Phone Number" id="email" name="email">
+                       </div>
+                         <div class="row mb3">
+							<div class="mb-3 col"> 
+                            <label><input type="radio" class=""  id="withpassword" name="password"> With Password</label></div>
+							<div class="mb-3 col"> 
+							<label><input type="radio" class=""  id="withoutpassword" name="password">  Without Password</label></div>
+						</div>
+						<!--<div class="mb-3">
+                       <label class="visually-hidden" for="password">Enter Password</label><input type="password" class="form-control input-sm" placeholder="Enter Password" id="password" name="password">
+                       </div>-->
+						
+                     
+                    
+                      
+                       <button type="button" class="btn  btn-submit next action-button">Submit</button>
+                      
+					
+				   </fieldset>
+				   <fieldset>
+				   <div class="modal-header">                
+						<h4>Verification</h4>
+					</div>
+					<div class="mb-3">
+                       <label class="visually-hidden" for="verification_code">Enter Verification Code</label><input type="password" class="form-control input-sm" placeholder="Enter Verification Code" id="verification_code" name="verification_code">
+                      </div>
+					  <div class="mb-3">
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" id="cr_pass_opt">
+					  <label class="form-check-label" for="cr_pass_opt">
+						Create Password <em>(Optional)</em>
+					  </label>
+					  
+					</div>
+				  </div>
+				  <div class="row mb3">
+				  <div class="mb-3 col-md-6">
+                       <label class="visually-hidden" for="c_pass_o">Create Password</label><input type="password" class="form-control input-sm" placeholder="Create Password" id="c_pass_o" name="c_pass_o">
+                      </div>
+					  <div class="mb-3 col-md-6">
+                       <label class="visually-hidden" for="cc_pass_o">Confirm Password</label><input type="password" class="form-control input-sm" placeholder="Confirm Password" id="cc_pass_o" name="cc_pass_o">
+                      </div>
+				</div> 
+						 <button type="button" class="btn  btn-submit next action-button">Complete Verification</button>
+				   </fieldset>
+				 <fieldset>
+			<div class="modal-header">                
+                <h4 class="fw-thin">Basic Info</h4>
+            </div>
+				   <div class="row mb3">
+					<div class="mb-3 col-md-6">
+                       <label class="visually-hidden" for="f_name">First Name</label><input type="text" class="form-control input-sm bb_textbox" placeholder="First Name" id="f_name" name="f_name"> </div>
+					   <div class="mb-3 col-md-6">
+					   <label class="visually-hidden" for="l_name">Last Name</label><input type="text" class="form-control input-sm bb_textbox" placeholder="Last Name" id="l_name" name="l_name">
+                       </div>
+                   </div>
+                    <div class="row mb3">
+					<div class="mb-3 col">  
+                           <label class="visually-hidden" for="dob">Date of Birth</label> <input type="text" class="form-control input-sm bb_textbox" name="dob" placeholder="Date of Birth" id="dob" >
+						</div>
+					</div>
+					
+					<div class="mb-3">  
+                           <label class="visually-hidden" for="p_location">Location</label> <input type="text" class="form-control input-sm bb_textbox" name="p_location" placeholder="Location" id="p_location" >
+						</div>
+					
+					<div class="row mb3">
+					<div class="mb-3 col-md-4">  
+                           <label class="visually-hidden" for="height">Your Height</label> <input type="text" class="form-control input-sm bb_textbox" name="height" placeholder="Your Height" id="height" >
+						</div>
+						<div class="mb-3  col-md-4">  
+                           <label class="visually-hidden" for="Weight">Your Weight</label> <input type="text" class="form-control input-sm bb_textbox" name="Weight" placeholder="Your Weight" id="Weight" >
+						</div>
+						<div class="mb-3  col-md-4">  
+                           <label class="visually-hidden" for="nation">Nationality</label> <input type="text" class="form-control input-sm bb_textbox" name="nation" placeholder="Nationality" id="nation" >
+						</div>
+					</div>
+					<div class="row mb3">
+					<div class="mb-3 col"> 
+                       <label class="visually-hidden" for="bio">Your Bio</label><textarea class="form-control input-sm" placeholder="Your Bio" id="bio" name="bio" rows="3"></textarea>
+                    </div>
+					</div>
+				<div class="mb-3">
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" id="termsofuse">
+					  <label class="form-check-label" for="termsofuse">
+						I accept Sportvote <a href="#terms" title="termofuse" class="terms_btn">Terms of Use</a>
+					  </label>
+					  
+					</div>
+				  </div>
+									 
+									
+                      
+                        
+                       <button type="button" class="btn  btn-submit next action-button">Choose Your Profile</button>
+                    
+    </fieldset>
+    <fieldset class="select-profile">
+				
+				<div class="form-header">                
+					<h4>Your Profile</h4>
+					<p>Select the <strong><u>most appropriate role</u></strong> that describe your usage of SportVote!</p>
+				</div>
+			<div class="s-profile-wrap">
+				<div class="form-check">
+				  <input class="fans" type="radio" name="selectprof" id="selectprof1" value="lovesport">
+				  <label class="form-check-label" for="selectprof1">
+					I Love Sports
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="player" type="radio" name="selectprof" id="selectprof2"  value="playsport">
+				  <label class="form-check-label" for="selectprof2">
+					I Play Sports
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="manager" type="radio" name="selectprof" id="selectprof1" value="managesport">
+				  <label class="form-check-label" for="selectprof1">
+					I Manage Team/s
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="organizer" type="radio" name="selectprof" id="selectprof2" value="organizesport">
+				  <label class="form-check-label" for="selectprof2">
+					I Organize Games
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="scout" type="radio" name="selectprof" id="selectprof1" value="scout">
+				  <label class="form-check-label" for="selectprof1">
+					I Scout Talent
+				  </label>
+				</div>
+				<div class="form-check">
+				  <input class="other" type="radio" name="selectprof" id="selectprof2" value="other">
+				  <label class="form-check-label" for="selectprof2">
+					Other/Support Staff
+				  </label>
+				</div>
+			</div>
+			
+					
+			</fieldset>
+			
+			
+			 
+                    </form>  
+					
+			</section> 
+					
+					
+            </div>
+<!--
+            <div class="modal-footer">
+                <div style="padding:10px"></div>
+            </div>
+-->
+		<div id="terms">
+					 <p>What is Lorem Ipsum?</p><p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p><p>
+						Why do we use it?
+						</p><p>
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+						</p><p>
+
+						Where does it come from?
+						</p><p>
+						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+						</p><p>
+						The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+						</p>
+					 </div>
+        </div>
+        </div>
+    </div>
+  
+  
+  
+        </div>
+      </div>
+
+    </header>
+	
+	
+<section class="hero">
+	<div class="container">
+		<div class="row">
+			
+		</div>
+	</div>
+</section>
+
+  <main id="main">
+	<div class="container">
+        <div class="row">
+           <div class="col-lg-2 col-md-6">
+		   content Goes here
+		   </div>
+		</div>
+	</main>
+<footer class="footer-section">
+ <div class="container">
+        <div class="row">
+
+           <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Host Your Sport</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Soccer</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cricket</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hockey</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Basketball</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Rugby</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Volleyball</a></li>
+			  <hr>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Suggest a Sport</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Manage</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Your Sports Profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Your Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The Competitions</a></li>
+			</ul>
+			<br>
+			<h4>Find</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The right team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The Prime Players</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>About us</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Story</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">The Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Why Sports</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Partnerships</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Support</a></li>
+			  <hr>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Investors</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 col-md-6 widgets">
+           <div><form>
+			   <div class="input-group">
+					  <input type="email" class="form-control" placeholder="Email or Phone Number" name="email">
+					  <div class="input-group-btn ">
+						<button class="btn btn-submit-group" type="submit">Join Now</button>
+					  </div>
+					</div>
+		   </form>
+            </div>
+			<div class="social-chat">
+				<span class="letschat">Lets Chat: <a href="" alt="" title="letschat">hi@sportvote.org</a>     </span>
+				<ul class="social_icons"><li>Follow Us:</li><li><a href="#" title="facebook"><i class="icons icon-fb"></i></a></li><li><a href="#" title="twitter"><i class="icons icon-tw"></i></a></li><li><a href="#" title="linkedin"><i class="icons icon-li"></i></a></li><li><a href="#" title="Instagram"><i class="icons icon-insta"></i></a></li></ul>
+				<div class="clearfix"></div>
+			</div>
+          </div>
+		  </div>
+		  <div class="row ">
+			<div class="col-lg-12 text-center copyright">
+				Copyright 2021. All rights for Sportvote logo, marketing content & marketing graphics are reserved to Sportvote Inc.
+			</div>
+		  </div>
+		  </div>
+	
+</footer>
+
+ <script src="js/jquery-3.3.1.min.js"></script>
+ <script src="js/jquery-migrate-3.0.1.min.js"></script>
+ <script src="js/jquery.easing.1.3.js"></script>
+  <!--<script src="js/jquery-ui.js"></script>
+ 
+  
+    <script src="js/aos.js"></script>
+   <script src="js/script.js"></script> <script src="js/popper.min.js"></script>  
+   Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+ 
+</body>
+
+</html>

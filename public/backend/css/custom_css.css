@@ -1,0 +1,28 @@
+.dtr-inline tr .sorting {
+    pointer-events: none !important;
+}
+.card-body .dataTables_length label {
+    display: flex;
+}
+.card-body .dataTables_filter label {
+    display: flex;
+}
+label select,
+label input {
+    margin: auto 10px;
+}
+.card-header.bg-primary {
+    background-color: #343a40 !important;
+}
+.card-header .card-title {
+    margin: 10px auto;
+}
+.teamBox .dasbordTeamIcn {
+    top: -5px !important;
+}
+.dataTables_paginate.paging_simple_numbers{
+    float: right;
+}
+.dataTables_info{
+    display: none;
+}

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SportVote</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="https://code.jquery.com/jquery-2.2.4.min.js">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+
+
+</head>
+
+
+
+
+
+<body>
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+        <header class="site-navbar py-4 shadow" role="banner">
+
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <div class="site-logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="SportVote Logo">
+                        </a>
+
+                    </div>
+                    <div class="search-bar ms-4">
+                        <form>
+                            <div class="input-group">
+                                <div class="input-group-btn "><button type="submit" name="search"
+                                        class="btn icon-search"></button></div><input type="text" name="search"
+                                    placeholder="search" class="form-control search-box">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="ms-auto me-auto h-b-lr">
+                        <nav class="site-navigation position-relative text-end" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                                <li class="active"><a href="location.html" class="nav-link"><img
+                                            src="images/team-icon-128.png" class="icon-np">Locate</a></li>
+                                <li><a href="players.html" class="nav-link"><img src="images/team-icon-128.png"
+                                            class="icon-np">My Team</a></li>
+                                <li><a href="matches.html" class="nav-link"><img src="images/competitions-icon-128.png"
+                                            class="icon-np">Competitions</a></li>
+                                <li class="dropdown"><a class="nav-link dropdown-toggle round-icon" href="#"
+                                        data-bs-toggle="dropdown"><i class="icon-plus "></i></a>
+                                    <ul class="dropdown-menu fade-down c-profile-nav">
+                                        <li><a class="dropdown-item " href="#"><span class="create"> Create</span><i
+                                                    class="icon-plus round-circle"></i></a></li>
+                                        <li><a class="dropdown-item" href="Create_a_Competition.html"><img
+                                                    src="images/noun_Trophy_1478285.svg" alt="team-icon"> A Comptition
+                                            </a></li>
+                                        <li><a class="dropdown-item" href="Create_a_new_team.html"><img
+                                                    src="images/noun_team_729746.svg" alt="team-icon"> New Team</a></li>
+                                        <li><a class="dropdown-item" href="player_profile.html"><img
+                                                    src="images/noun_profile_1911676.svg" alt="team-icon"> Player
+                                                Profile</a></li>
+                                        <li><a class="dropdown-item" href="other_profile.html"><img
+                                                    src="images/noun_Official Award_2477543.svg" alt="team-icon"> Other
+                                                Profile </a></li>
+
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+                    <div class="ms-auto">
+                        <nav class="notification-icons text-end" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                                <li><a href="" title="profile"><img src="images/person_5.jpg" alt="profile-images"
+                                            class=""></a><span class="p_name">Kulbir Singh</span></li>
+                                <li><a href="" title="notification"><i class="icon-bell"></i><span
+                                            class="badge">12</span></a></li>
+                                <li><a href=""><i class="icon-angle-down"></i></a></li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle  float-md-end"><span
+                                class="icon-menu h3  text-black"></span></a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="FontStyle"><span class="icon-noun-s icon-noun-circle noun_TrophyTeam"></span> Create a
+                        <strong class="NEWw">New Team</strong>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <main id="main" class="CreateTeam">
+
+
+        <div class="container ScrollFix ">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 pe-0 content ">
+                    <form class="" id="regForm1" action="thanks.html">
+                        <div class="competition-list mb-3">
+                            <ul class="games-list owl-4-slider owl-carousel">
+                                <li class="item"><input type="radio" name="competition" value="soccer" checked
+                                        id="soccer" onclick="divshowhide()"><label for="competition"><span> Soccer
+                                        </span><i class="icon-check checked-badge"></i></label></li>
+
+                                <li class="item"><input type="radio" name="competition" value="Basketball"
+                                        id="Basketball" onclick="divshowhide()"><label for="competition"><span>
+                                            Basketball </span><i class="icon-check checked-badge"></i></label></li>
+                                <li class="item"><input type="radio" name="competition" value="Cricket" id="Cricket"
+                                        onclick="divshowhide()"><label for="competition"><span> Cricket </span><i
+                                            class="icon-check checked-badge"></i></label></li>
+                                <li class="item"><input type="radio" name="competition" value="Volleyball"
+                                        id="Volleyball" onclick="divshowhide()"><label for="competition"><span>
+                                            Volleyball </span><i class="icon-check checked-badge"></i></label></li>
+                                <li class="item"><input type="radio" name="competition" value="Rugby" id="Rugby"
+                                        onclick="divshowhide()"><label for="competition"><span> Rugby </span><i
+                                            class="icon-check checked-badge"></i></label></li>
+                                <li class="item"><input type="radio" name="competition" value="Hockey" id="Hockey"
+                                        onclick="divshowhide()"><label for="competition"><span> Hockey </span><i
+                                            class="icon-check checked-badge"></i></label></li>
+                            </ul>
+                        </div>
+
+                        <div class="soccer-form-data  pe-2 selectt" id="soccer-form">
+
+                            <!-- One "tab" for each step in the form: -->
+                            <div class="tab">
+                               <!--  <p class="Step1-Comp mb-3"><span class="StepOne">Step 1:</span> Define Competition type
+                                    &
+                                    basic Details </p> -->
+                                <div class="row mb-3">
+                                    <div class=" col-md-6 FlotingLabelUp">
+                                        <div class="floating-form ">
+                                            <div class="floating-label form-select-fancy-1">
+                                                <input class="floating-input" type="text" placeholder=" ">
+                                                <span class="highlight"></span>
+                                                <label>Team Name *</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6 FlotingLabelUp ">
+                                        <div class="floating-form ">
+                                            <div class="floating-label form-select-fancy-1">
+                                                <input class="floating-input" type="text" placeholder=" ">
+                                                <span class="highlight"></span>
+
+                                                <label>Location *</label>
+                                                <span class="input-group-text apicon"><i
+                                                        class="icon-map-marker"></i></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class=" col-md-6 FlotingLabelUp">
+                                        <div class="floating-form ">
+                                            <div class="floating-label form-select-fancy-1">
+                                                <input class="floating-input" type="text" placeholder=" ">
+                                                <span class="highlight"></span>
+                                                <label>Home Ground Name *</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6 FlotingLabelUp ">
+                                        <div class="floating-form ">
+                                            <div class="floating-label form-select-fancy-1">
+                                                <input class="floating-input" type="text" placeholder=" ">
+                                                <span class="highlight"></span>
+
+                                                <label>Location *</label>
+                                                <span class="input-group-text apicon"><i
+                                                        class="icon-map-marker"></i></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class=" col-md-6 FlotingLabelUp ">
+                                        <div class="floating-form ">
+                                            <div class="floating-label form-select-fancy-1">
+                                                <input class="floating-input" type="file" placeholder=" ">
+                                                <span class="highlight"></span>
+                                                <label>Team logo*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6 FlotingLabelUp ">
+                                        <div class="floating-form ">
+                                            <div class="floating-label form-select-fancy-1">
+                                               <!--  <input class="floating-input" type="File" placeholder=" "> -->
+                                               <input id="color" type="color" class=" floating-input NEwColorPicker input-sm" value="" name="team_color">
+                                                <span class="highlight"></span>
+                                                <label>Team Color *</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class=" col-md-6">
+									   <label>Team Color *</label>
+									  <input id="color" type="color" class="grey-form-control NEwColorPicker input-sm" value="" name="team_color">
+									  
+				          			</div> -->
+                                </div>
+                                
+                                <div class="row ">
+                                   
+                                    <div class="col-lg-5 col-md-4 FlotingLabelUp">
+
+
+										<div class="floating-form ">
+											<span class="round01"></span> 
+											
+
+
+											<div class="floating-label form-select-fancy-1">
+
+
+										      <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+										        <option value=""></option>
+										        <option value="1">Alabama</option>
+										        <option value="2">Boston</option>
+										        <option value="3">Ohaio</option>
+										        <option value="4">New York</option>
+										        <option value="5">Washington</option>
+										      </select>
+										      
+										      <span class="highlight"></span>
+										      <label>Select Admin Position</label>
+
+										    </div>
+
+										</div>
+										
+									</div>
+                                    <div class="col-lg-7 multi-button mb-3 d-flex">
+                                        <div class="col-10">
+                                            <select required class="form-control form-select-fancy-1"
+                                                aria-label=".form-select-lg example" name="key_ranking"
+                                                id="key_ranking">
+                                                <option value="" disabled selected hidden>Invite Admin to the
+                                                    team</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="submit" class="btn btn-default float-end btn-round-submit"><i
+                                                    class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row ">
+                                    
+                                    <div class="col-lg-5 col-md-4 FlotingLabelUp">
+
+
+										<div class="floating-form ">
+											<span class="round01"></span> 
+											
+
+
+											<div class="floating-label form-select-fancy-1">
+
+
+										      <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+										        <option value=""></option>
+										        <option value="1">Alabama</option>
+										        <option value="2">Boston</option>
+										        <option value="3">Ohaio</option>
+										        <option value="4">New York</option>
+										        <option value="5">Washington</option>
+										      </select>
+										      
+										      <span class="highlight"></span>
+										      <label>Select Player Position </label>
+
+										    </div>
+
+										</div>
+										
+									</div>
+                                    <div class="col-lg-7 multi-button mb-3 d-flex">
+                                        <div class="col-10">
+                                            <select required class="form-control form-select-fancy-1"
+                                                aria-label=".form-select-lg example" name="key_ranking"
+                                                id="key_ranking">
+                                                <option value="" disabled selected hidden>Invite Player to the
+                                                    team</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="submit" class="btn btn-default float-end btn-round-submit"><i
+                                                    class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-3">
+
+
+                                    <div class=" col-md-12 FlotingLabelUp ">
+
+
+                                        <div class="floating-form  ">
+                                            <div class="floating-label ">
+                                                <textarea
+                                                    class="floating-input floating-textarea form-control Competiton grey-form-control"
+                                                    cols="30" rows="5" placeholder=" "></textarea>
+                                                <span class="highlight"></span>
+                                                <label class="TeamDescrForm">Team Description ...</label>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-2 d-md-block mt-5 mb-5">
+
+                                <button type="button" id="prevBtn" class="btn col-5 btn-default btn-cancel"
+                                    onclick="nextPrev(-1)">Cancel</button>
+                                <button type="button" id="nextBtn" class="btn col-5 btn-submit float-md-end"
+                                    onclick="nextPrev(1)">Save</button>
+
+                            </div>
+                            <!-- Circles which indicates the steps of the form: -->
+                            <div style="text-align:center;margin-top:40px;display:none;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+                <div class="col-lg-5 col-md-6 ps-0 pe-0  h-screen sticky" style="top: 0px;">
+                    <div class="show-content">
+                        <div class="show-content-header">
+                            <div class="d-flex align-items-center ">
+                            	<a href=""><span class="Edit-Icon-white EditProfileOneSticky"> </span></a>
+                                <div class="game-logo">
+                                    <img src="images/egg-logo.jpg" alt="SportVote Logo" class="img-fluid Logo8080">
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <h2 class="header-name">English Football <br>leAGUE</h2>
+                                    <h5><span class="header_game">Soccer League</span> in Seoul, South Korea</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="team-deatil row">
+						<div class="col">
+							<h5>Administered By</h5>
+							<ul class="admin-list">
+								  <li><i class="icon-angle-double-right"></i> Kulbir Singh <br>
+									<span>(Team Admin)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li><i class="icon-angle-double-right"></i> James Smith <br>
+									<span>(Scout)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li class="pending-list"><i class="icon-angle-double-right"></i> Alber A Smith <span class="pending-icon"></span><br>
+								  	<span>(Coach)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li><i class="icon-angle-double-right"></i> Rockard Smith <br>
+								  	<span>(Team Admin)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  
+								</ul>
+						</div>
+						<div class="col"><h5><span class="badge n_plyr badge-round-pink">12</span>Players</h5>
+							<ul class="player-list">
+								  <li><i class="icon-angle-double-right"></i> Johny Walker <br>
+									<span>(Goal Keeper)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li><i class="icon-angle-double-right"></i> Albert A Smith <br>
+									<span>(Midfielder)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li><i class="icon-angle-double-right"></i> James Gunn <br>
+								  	<span>(Defender)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								   <li><i class="icon-angle-double-right"></i> James Gunn <br>
+								  	<span>(Defender)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								   <li><i class="icon-angle-double-right"></i> Albert A Smith <br>
+									<span>(Midfielder)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li><i class="icon-angle-double-right"></i> James Gunn <br>
+								  	<span>(Defender)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li> <li><i class="icon-angle-double-right"></i> Albert A Smith <br>
+									<span>(Midfielder)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  <li><i class="icon-angle-double-right"></i> James Gunn <br>
+								  	<span>(Defender)</span>
+									<a href="#" class="btn btn-cross">×</a>
+								  </li>
+								  
+								</ul>
+						
+						</div>
+					</div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Host Your Sport</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Soccer</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Cricket</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Hockey</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Basketball</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Rugby</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Volleyball</a></li>
+                        <hr>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Suggest a Sport</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Manage</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Your Sports Profile</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Your Team</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">The Competitions</a></li>
+                    </ul>
+                    <br>
+                    <h4>Find</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">The right team</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">The Prime Players</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>About us</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Our Story</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">The Team</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Why Sports</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Partnerships</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Our Support</a></li>
+                        <hr>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Our Investors</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-6 widgets">
+                    <div>
+                        <form>
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Email or Phone Number"
+                                    name="email">
+                                <div class="input-group-btn ">
+                                    <button class="btn btn-submit-group" type="submit">Join Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="social-chat">
+                        <span class="letschat">Lets Chat: <a href="" alt="" title="letschat">hi@sportvote.org</a>
+                        </span>
+                        <ul class="social_icons">
+                            <li>Follow Us:</li>
+                            <li><a href="#" title="facebook"><i class="icons icon-fb"></i></a></li>
+                            <li><a href="#" title="twitter"><i class="icons icon-tw"></i></a></li>
+                            <li><a href="#" title="linkedin"><i class="icons icon-li"></i></a></li>
+                            <li><a href="#" title="Instagram"><i class="icons icon-insta"></i></a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-12 text-center copyright">
+                    Copyright 2021. All rights for Sportvote logo, marketing content & marketing graphics are reserved
+                    to Sportvote Inc.
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- date picker script -->
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+
+    <!-- end date picker script  -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--<script src="js/jquery-ui.js"></script>
+ 
+  
+    <script src="js/aos.js"></script>
+   <script src="js/script.js"></script> <script src="js/popper.min.js"></script>  
+   Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+    <script src="js/script.js"></script>
+
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/multi-step.js"></script>
+    <script>
+
+
+        $('.form-control').on('focus blur change', function (e) {
+            var $currEl = $(this);
+
+            if ($currEl.is('select')) {
+                if ($currEl.val() === $("option:first", $currEl).val()) {
+                    $('.control-label', $currEl.parent()).animate({ opacity: 0 }, 240);
+                    $currEl.parent().removeClass('focused');
+                } else {
+                    $('.control-label', $currEl.parent()).css({ opacity: 1 });
+                    $currEl.parents('.form-group').toggleClass('focused', ((e.type === 'focus' || this.value.length > 0) && ($currEl.val() !== $("option:first", $currEl).val())));
+                }
+            } else {
+                $currEl.parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+            }
+        }).trigger('blur');
+
+    </script>
+
+    <script type="text/javascript">
+
+        /* Bootstrap 5 JS included */
+        /* vanillajs-datepicker 1.1.4 JS included */
+
+        const getDatePickerTitle = elem => {
+            // From the label or the aria-label
+            const label = elem.nextElementSibling;
+            let titleText = '';
+            if (label && label.tagName === 'LABEL') {
+                titleText = label.textContent;
+            } else {
+                titleText = elem.getAttribute('aria-label') || '';
+            }
+            return titleText;
+        }
+
+        const elems = document.querySelectorAll('.datepicker_input');
+        for (const elem of elems) {
+            const datepicker = new Datepicker(elem, {
+                'format': 'dd/mm/yyyy', // UK format
+                title: getDatePickerTitle(elem)
+            });
+        }
+    </script>
+
+</body>
+
+</html>

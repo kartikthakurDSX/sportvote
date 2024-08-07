@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SportVote</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css"/>
+</head>
+<body>
+   
+        <div class="site-wrap">
+            <div class="site-mobile-menu site-navbar-target">
+                <div class="site-mobile-menu-header">
+                    <div class="site-mobile-menu-close">
+                        <span class="icon-close2 js-menu-toggle"></span>
+                    </div>
+                </div>
+                <div class="site-mobile-menu-body"></div>
+            </div>
+            <header class="site-navbar py-4 shadow" role="banner">
+                <div class="container-lg">
+                    <div class="d-flex align-items-center">
+                        <div class="site-logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="SportVote Logo">
+                            </a>
+                        </div>
+                        <div class="search-bar ms-4">
+                            <form>
+                                <div class="input-group">
+                                    <div class="input-group-btn "><button type="submit" name="search"
+                                            class="btn icon-search"></button></div>
+                                    <input type="text" name="search" placeholder="search"
+                                        class="form-control search-box">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="ms-auto me-auto h-b-lr">
+                            <nav class="site-navigation position-relative text-end" role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                                    <li class="active"><a href="location.html" class="nav-link"><img
+                                                src="images/team-icon-128.png" class="icon-np">Locate</a></li>
+                                    <li><a href="players.html" class="nav-link"><img src="images/team-icon-128.png"
+                                                class="icon-np">My Fan Club</a></li>
+                                    <li><a href="matches.html" class="nav-link"><img
+                                                src="images/competitions-icon-128.png" class="icon-np">Competitions</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="nav-link dropdown-toggle round-icon" href="#"
+                                            data-bs-toggle="dropdown"><i class="icon-plus "></i></a>
+                                        <ul class="dropdown-menu fade-down c-profile-nav">
+                                            <li><a class="dropdown-item " href="#"><span class="create"> Create</span><i
+                                                        class="icon-plus round-circle"></i></a></li>
+                                            <li><a class="dropdown-item" href="Create_a_Competition.html"><img
+                                                        src="images/noun_Trophy_1478285.svg" alt="team-icon"> A
+                                                    Comptition
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="Create_a_new_team.html"><img
+                                                        src="images/noun_team_729746.svg" alt="team-icon"> New Team</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="player_profile.html"><img
+                                                        src="images/noun_profile_1911676.svg" alt="team-icon"> Player
+                                                    Profile</a></li>
+                                            <li><a class="dropdown-item" href="other_profile.html"><img
+                                                        src="images/noun_Official Award_2477543.svg" alt="team-icon">
+                                                    Other
+                                                    Profile </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="ms-auto">
+                            <nav class="notification-icons text-end" role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav me-auto d-none d-lg-block">
+                                    <li><a href="" title="profile"><img src="images/person_5.jpg" alt="profile-images"
+                                                class=""></a><span class="p_name">Kulbir Singh</span>
+                                            </li>
+
+                                    <li><a href="" title="notification"><i class="icon-bell"></i><span
+                                                class="badge">12</span></a>
+                                    </li>
+                                    <li><a href=""><i class="icon-angle-down"></i></a></li>
+                                </ul>
+                            </nav>
+                            <a href="#"
+                                class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle  float-end"><span
+                                    class="icon-menu h3  text-black"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="header-bottom header-bottomTeamPub dashboard"
+                style="background-image: url('images/competition-bg.png');">
+
+                <div class="container-fluid bh-WhiteTsp">
+
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="col-sm-2 col-4">
+                            </div>
+                            <div class="col-sm-10 col-8 LineHSpace pt-3 pb-3">
+                                <span class="FCBarcelona"><strong class="FCStyle">UEFA</strong> K.O Cup</span>
+                                <!-- <p class="ClubMore">More than a club. Més que un Club</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href=""><span class="Edit-Icon-white HeroImgEditTop"> </span></a>
+            <div class="dashboard-profile ">
+                <div class="container-lg">
+                    <div class="row bg-white">
+                        <div class="col-md-12  position-relative">
+                            <div>
+                                <a href="" class="user-profile-imgTeam">
+                                    <img src="images/competition-logo.png" width="100%" class="img-fluid"
+                                        alt="profle-image">
+                                </a>
+                                <a href=""><span class="Edit-Icon-white EditProfileOne"> </span></a>
+                            </div>
+                            <div class="user-profile-detail-Team float-start w-auto">
+                                <h5 class="SocerLegSty"><span class="header_gameTeam">Long K.O. Cup</span> in
+                                    Barcelona,Spain<br><strong>Managed by:</strong>Aleksander Čeferin & Michel Platini
+                                    Ángel
+                                    María
+                                    Villar</h5>
+                            </div>
+                            <div class="w-auto float-end P-TB">
+                                <span class="float-md-end FootRFix">
+                                    <!-- <button class="btn btn-black">Add Friend<img src="images/User_add_.png" alt="" class="btn-icon"></button>  -->
+                                    <button class="btn btn-Blue">Edit Info</button>
+                                    <a class="btn-icon FollowIcoNN-Edit" href=""><span class="Edit-Icon-white">
+                                        </span></a>
+                                    <!-- <img src="images/Follow-Icon.png" alt="" class="btn-icon FollowIcoNN"> -->
+                                </span>
+                                <h1 class="social-count "><span class="FlowerFollow "
+                                        style="text-align: right;"><small>12.5M
+                                            Followers</small></span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main id="main" class="dashboard-wrap Team-Public-Profil Competitionn-Page Competitionn-Page-Additional  KoAdminView">
+            <div class="container-fluid bg-GraySquad">
+                <div class="container-lg">
+                    <div class="row AboutMe">
+                        <div class="col-md-2 col-12 resMob pr-0">
+                            <div class="boxSuad">
+                                <span class="SquadCS"><span class="seasionBold">SEASION:</span>JUN21 TO MAR22</span>
+                                
+                                <!-- <div class="dropdown">
+                                    <a class="btn btn-secondaryNew dropdown-toggle" href="#" role="button"
+                                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        2021-22
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">2022-23</a></li>
+                                        <li><a class="dropdown-item" href="#">2023-24</a></li>
+                                        <li><a class="dropdown-item" href="#">2024-25</a></li>
+                                    </ul>
+                                </div> -->
+                                <select class="form-select btn-secondaryNew" aria-label="Default select example">
+                                  <option selected>2021-22</option>
+                                  <option value="1">2022-23</option>
+                                  <option value="2">2023-24</option>
+                                  <option value="3">2024-25</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-1 p-0 seventyNine">
+                            <div class="NAtionPLAyer">
+                                <span class="SquadCS">TEAM</span>
+                                <p class="fitIn"><span class="FiveFtComp">79</span><span class="SlePer"></span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 p-0">
+                            <div class="ForeginPlayer">
+                                <span class="SquadCS">WATCHES PLAYED</span>
+                                <p class="fitIn"><span class="FiveFtComp">108</span><span class="SlePer">/125</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mobCompetition">
+                            <div class="row">
+                                <div class="col-md-5 col-5 mobCopm ">
+                                    <div class="NAtionPLAyerTotal">
+                                        <div class="">
+                                            <span class="SquadCS ">TOTALS GOALS </span>
+                                        </div>
+                                        <div class=" fitIn">
+                                            <span class="FiveFtComp "> 330</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-7 mobCopm ">
+                                    <span class="slesss"></span>
+                                    <div class="NAtionPLAyer">
+                                        <div class="">
+                                            <span class="SquadCS ">TGOALS PER MATCH </span>
+                                        </div>
+                                        <div class=" fitIn">
+                                            <span class="FiveFtComp "> 03.06</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 pl-0 ">
+                            <!-- <a href=""><span class="fa-plus"> </span></a> -->
+                            <span class="fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModalEdit"></span>
+                            <div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Content
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                            <div class="bg-heinken">
+                                <div class="text-Middle">
+                                    <div class="container">
+                                        <div class="owl-carousel">
+                                            <div class="slides"><img src="images/slider-responser.jpg"
+                                                    class="img-fluidD " alt="heineken" /></div>
+                                            <div class="slides"><img src="images/heineken.png" class="img-fluidD "
+                                                    alt="heineken" /></div>
+                                        </div>
+                                    </div>
+                                    <span class="TeamSponSorsComp">OFFICIAL SPONSORS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-lg NewSAni">
+                <div class="row M-topSpace">
+                    <div class="col-md-1 col-3 pr-0">
+                        <div class="news1">
+                            <span class="Newsheding">NEWS</span>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-9 p-0">
+                        <div class="Postnews">
+                            <marquee class="newsfloting" behavior="scroll" direction="left">
+                                Champions League is being, commonly referred to as Barcelona and colloquially known as
+                                Barça, is
+                                a professional football club based in Barcelona, Spain La Liga
+                            </marquee>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-0">
+                        <div class="newsPost">
+                            <span class="NewshedingPost">POST NEWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-lg ">
+                <div class="row M-topSpace">
+                    <div class="col-md-8 col-lg-8 ">
+                        <h1 class="Poppins-Fs30">Notifications <button class="btn fs1 float-end"><i class="icon-more_horiz"></i></button></h1>
+
+<div class="box-outer-lightpink All-Notification-Section">
+
+
+
+                            <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+
+                                <li class="nav-item" role="presentation" id="pills-tabContent1">
+
+                                    <div class="nav-link active " id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-All" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">
+                                        <span class="Allthr">10</span>
+                                        <span class="AllUnderr"> All</span>
+
+                                    </div>
+
+
+                                </li>
+                                <li class="nav-item" role="presentation" id="pills-tabContent2">
+                                    <div class="nav-link " id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-02" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false">
+                                        <span class="Allthr">25</span><span class="AllUnderr"> Un-read</span>
+
+                                    </div>
+                                </li>
+                                <li class="nav-item" role="presentation" id="pills-tabContent3">
+                                    <div class="nav-link " id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-03" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">
+                                        <span class="Allthr">18</span><span class="AllUnderr"> Team </span></div>
+                                </li>
+                                <li class="nav-item" role="presentation" id="pills-tabContent4">
+                                    <div class="nav-link " id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-04" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">
+                                        <span class="Allthr">08</span><span class="AllUnderr"> player</span></div>
+                                </li>
+                                
+                            </ul>
+
+
+
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active " id="pills-All" role="tabpanel"
+                                    aria-labelledby="pills-home-tab"><table class="table table-hover Notification-Styling">
+                                    <tbody>
+                                       
+                                       <tr>
+                                           <td class="AdminProNoti">
+                                             <div class="AdmIconNoti ">
+                                               <img src="images/girl.png" class="img-fluid imgHeiWid rounded-circle"> 
+                                             </div>
+                                               
+                                           </td>
+                                          <td style="width: 65%">
+                                               <b class="JoinTeamNotiStyle"> John Deol </b>                                               
+                                               <p class="notificationtextMain mb-0"> <span class="MeStyle">DX,</span> Admin of <a href="https://dev.sportvote.org/public/team/4" target="a_blank"> Dx test  </a>would like you to join their team as a/an Striker. 
+                                               </p>
+                                               <p class="mb-0"><span class="DateNotifi"> 10 min </span></p>
+
+                                          </td>
+
+                                          <td>
+                                            <button class="btn btn-danger btn-xs-nb">RFTRFAT</button>
+                                          </td>
+
+
+                                       </tr>
+                                       <tr>
+                                           <td class="AdminProNoti">
+                                             <div class="AdmIconNoti ">
+                                               <img src="images/girl.png" class="img-fluid imgHeiWid rounded-circle"> 
+                                             </div>
+                                               
+                                           </td>
+                                          <td style="width: 65%">
+                                               <b class="JoinTeamNotiStyle"> John Deol </b>                                               
+                                               <p class="notificationtextMain mb-0"> <span class="MeStyle">DX,</span> Admin of <a href="https://dev.sportvote.org/public/team/4" target="a_blank"> Dx test  </a>would like you to join their team as a/an Striker. </p>
+                                               <p class="mb-0"><span class="DateNotifi"> 30 min </span></p>
+                                          </td>
+
+                                          <td>
+                                        <button class="btn btn-green btn-xs-nb">Accept</button>
+                                        <button class="btn btn-danger btn-xs-nb">Reject</button>
+                                    </td>
+
+
+                                       </tr>
+                                       <tr>
+                                           <td class="AdminProNoti">
+                                             <div class="AdmIconNoti ">
+                                               <img src="images/girl.png" class="img-fluid imgHeiWid rounded-circle"> 
+                                             </div>
+                                               
+                                           </td>
+                                          <td style="width: 65%">
+                                               <b class="JoinTeamNotiStyle"> John Deol </b>                                               
+                                               <p class="notificationtextMain mb-0"> <span class="MeStyle">DX,</span> Admin of <a href="https://dev.sportvote.org/public/team/4" target="a_blank"> Dx test  </a>would like you to join their team as a/an Striker. </p>
+                                               <p class="mb-0"><span class="DateNotifi"> 23 AUG 2022</span></p>
+                                          </td>
+
+                                          <td>
+                                            <button class="btn btn-danger btn-xs-nb">RFTRFAT</button>
+                                          </td>
+
+
+                                       </tr>
+                                       <tr>
+                                           <td class="AdminProNoti">
+                                             <div class="AdmIconNoti ">
+                                               <img src="images/girl.png" class="img-fluid imgHeiWid rounded-circle"> 
+                                             </div>
+                                               
+                                           </td>
+                                          <td style="width: 65%">
+                                               <b class="JoinTeamNotiStyle"> John Deol </b>                                               
+                                               <p class="notificationtextMain mb-0"> <span class="MeStyle">DX,</span> Admin of <a href="https://dev.sportvote.org/public/team/4" target="a_blank"> Dx test  </a>would like you to join their team as a/an Striker. </p>
+                                               <p class="mb-0"><span class="DateNotifi"> 18 AUG 2022</span></p>
+                                          </td>
+
+                                          <td>
+                                        <img src="images/accept-icon.png" alt="icon">
+                                        <span class="AcceptedStyle"> Accepted</span>
+                                    </td>
+
+
+                                       </tr>
+                                       <tr>
+                                           <td class="AdminProNoti">
+                                             <div class="AdmIconNoti ">
+                                               <img src="images/girl.png" class="img-fluid imgHeiWid rounded-circle"> 
+                                             </div>
+                                               
+                                           </td>
+                                          <td style="width: 65%">
+                                               <b class="JoinTeamNotiStyle"> John Deol </b>                                               
+                                               <p class="notificationtextMain mb-0"> <span class="MeStyle">DX,</span> Admin of <a href="https://dev.sportvote.org/public/team/4" target="a_blank"> Dx test  </a>would like you to join their team as a/an Striker. </p>
+                                               <p class="mb-0"><span class="DateNotifi"> 12 APR 2022</span></p>
+                                          </td>
+
+                                          <td>
+                                        <button class="btn btn-green btn-xs-nb">Accept</button>
+                                        <button class="btn btn-danger btn-xs-nb">Reject</button>
+                                    </td>
+
+
+                                       </tr>
+
+                                      
+
+                                       
+ 
+
+                                    </tbody>
+        </table>
+                                </div>
+                                <div class="tab-pane fade" id="pills-02" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">...Comming Soon 022
+                                </div>
+                                <div class="tab-pane fade" id="pills-03" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">  ...Comming Soon 033</div>
+                                <div class="tab-pane fade" id="pills-04" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">...Comming Soon 044</div>
+                                
+                            </div>
+
+
+
+
+                        </div>
+
+
+                        <!-- Notification -->
+                        
+
+                        
+
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <h1>Top Performers <button class="btn fs1 float-end"><i class="icon-more_horiz"></i></button></h1> -->
+                        <div class="box-outer-lightpink SocialList AboutSocalSec">
+                            <div class="">
+                                <span><img src="images/aboutStar-icon.png"></span> <span class="AboutStyleUs"> ABOUT
+                                    US</span><a href=""><span class="fa-plus"> </span></a>
+                                <p class="TextSocalInner">The UEFA Champions League is an annual club football
+                                    competition
+                                    organised by the Union of European Football Associations and contested by
+                                    top-division
+                                    European clubs, deciding the competition leg final.</p>
+                            </div>
+                            <hr>
+                            <div class="">
+                                <span><img src="images/AdminStar-icon.png"></span> <span class="AboutStyleUs">
+                                    ADMINISTRATION</span><a href=""><span class="fa-plus"> </span></a>
+                                <div class="D-FSpacng">
+                                    <div class="AdmIcon"><img src="images/freddie.png" width="100%" alt=""> </div>
+                                    <span class="SergiTeam"> Ronald Koeman, <span class="SpanishTeam">Head
+                                            Coach</span></span>
+                                </div>
+                                <div class="D-FSpacng">
+                                    <div class="AdmIcon"><img src="images/freddie.png" width="100%" alt=""> </div>
+                                    <span class="SergiTeam"> Sergi Barjuán, <span class="SpanishTeam">Team
+                                            Admin</span></span>
+                                </div>
+                                <div class="D-FSpacng">
+                                    <div class="AdmIcon"><img src="images/freddie.png" width="100%" alt=""> </div>
+                                    <span class="SergiTeam"> Eric Garcia, <span class="SpanishTeam">Field
+                                            Mange</span></span>
+                                </div>
+
+                                <nav aria-label="Page navigation" class="dots-paging mt-3">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link active-dot" href="#"></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr>
+                            <div class="">
+                                <span><img src="images/Desi-Refree-icon.png"></span> <span class="AboutStyleUs">
+                                    DESIGNATED REFREES</span><a href=""><span class="fa-plus"> </span></a>
+                                <div class="D-FSpacng">
+                                    <div class="AdmIcon"><img src="images/freddie.png" width="100%" alt=""> </div>
+                                    <span class="SergiTeam"> Ronald Koeman, <span class="SpanishTeam">Head
+                                            Coach</span></span>
+                                </div>
+                                <div class="D-FSpacng">
+                                    <div class="AdmIcon"><img src="images/freddie.png" width="100%" alt=""> </div>
+                                    <span class="SergiTeam"> Sergi Barjuán, <span class="SpanishTeam">Team
+                                            Admin</span></span>
+                                </div>
+                                <div class="D-FSpacng">
+                                    <div class="AdmIcon"><img src="images/freddie.png" width="100%" alt=""> </div>
+                                    <span class="SergiTeam"> Eric Garcia, <span class="SpanishTeam">Field
+                                            Mange</span></span>
+                                </div>
+
+                                <nav aria-label="Page navigation" class="dots-paging mt-3">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link active-dot" href="#"></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr>
+                            <div class=" UlliStyleSponsor">
+                                <span><img src="images/hrt-icon.png"></span> <span class="AboutStyleUs"> LEAGUE
+                                    SPONSORS</span><a href=""><span class="fa-plus"> </span></a>
+                                <div>
+                                    <ul class="SponsorSTeam" style="">
+                                        <li> <img class="dis-768 img-fluidD " src="images/team-spon-logo.png"></li>
+
+
+                                    </ul>
+
+                                    <ul class="SponsorSTeam">
+
+                                        <li> <img class="dis-768 img-fluidD" src="images/rakuten.png"></li>
+
+                                    </ul>
+
+                                    <ul class="SponsorSTeam">
+
+                                        <li> <img class="dis-768 img-fluidD" src="images/heineken.png"></li>
+                                    </ul>
+
+                                    <!--  <img class="dis-768" src="images/Community-Spon.png"> -->
+                                </div>
+                                <nav aria-label="Page navigation" class="dots-paging">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link " href="#"></a></li>
+                                        <li class="page-item"><a class="page-link active-dot" href="#"></a></li>
+                                        <li class="page-item"><a class="page-link " href="#"></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <hr>
+                            <div class="">
+                                <span><img src="images/twittter.png"></span> <span class="AboutStyleUs"> @FC
+                                    BARCELONA</span><a href=""><span class="fa-plus"> </span></a>
+                                <p class="TextSocalInner">Barcelona manager Xavi: “Ousmane Dembélé will turn whistles
+                                    into
+                                    applause here at Camp Nou, I’m sure”. #FCB</p>
+                                <p class="TextSocalInner">“We have to trust Ferrán Torres - it's a matter of giving him
+                                    time
+                                    and
+                                    confidence”.</p>
+                                <div class="SocalMatchImg">
+                                    <img src="images/aft_match.png" width="100%">
+                                </div>
+                                <a href="#" class="TwitterTxtBtm">12:00 PM · Feb 18, 2022</a>
+                            </div>
+                            <hr>
+                            <div class="">
+                                <span><img src="images/Youtube-icon.png"></span> <span class="AboutStyleUs"> LATEST
+                                    YOUTUBE
+                                    VIDEOS</span><a href=""><span class="Edit-Icon"> </span></a>
+                                <p></p>
+                                <div class="SocalMatchImg">
+                                    <img src="images/aft_match.png" width="100%">
+                                </div>
+                                <p></p>
+                                <p class="barVsEur">BARÇA - NAPOLI | UEFA EUROPA LEAGUE PRE-MATCH LIVESHOW</p>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+
+
+
+
+
+
+        <footer class="footer-section">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Host Your Sport</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Soccer</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Cricket</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Hockey</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Basketball</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Rugby</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Volleyball</a></li>
+                            <hr>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Suggest a Sport</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Manage</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Your Sports Profile</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Your Team</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">The Competitions</a></li>
+                        </ul>
+                        <br>
+                        <h4>Find</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">The right team</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">The Prime Players</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>About us</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Our Story</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">The Team</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Why Sports</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Partnerships</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Our Support</a></li>
+                            <hr>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Our Investors</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 widgets">
+                        <div>
+                            <form class="FooterForm">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email or Phone Number"
+                                        name="email">
+                                    <div class="input-group-btn ">
+                                        <button class="btn btn-submit-group B-Radios" type="submit">Join Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="social-chat mrgntop">
+                            <span class="letschat">Lets Chat: <a href="" alt="" title="letschat">hi@sportvote.org</a>
+                            </span>
+                            <ul class="social_icons">
+                                <li>Follow Us:</li>
+                                <li><a href="#" title="facebook"><i class="icons icon-fb"></i></a></li>
+                                <li><a href="#" title="twitter"><i class="icons icon-tw"></i></a></li>
+                                <li><a href="#" title="linkedin"><i class="icons icon-li"></i></a></li>
+                                <li><a href="#" title="Instagram"><i class="icons icon-insta"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-12 text-center copyright">
+                        Copyright 2022. All rights for Sportvote logo, marketing content & marketing graphics are
+                        reserved
+                        to
+                        Sportvote Inc.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+    <script type="text/javascript">
+        $('.responsive-tabs i.fa').click(function () {
+            $(this).parent().toggleClass('open');
+        });
+
+        $('.responsive-tabs > li a').click(function () {
+            $('.responsive-tabs > li').removeClass('active');
+            $(this).parent().addClass('active');
+            $('.responsive-tabs').toggleClass('open');
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                autoplay: 1000,
+                items: 1,
+                loop: true,
+                onInitialized: counter, //When the plugin has initialized.
+                onTranslated: counter //When the translation of the stage has finished.
+            });
+
+            function counter(event) {
+                var element = event.target;         // DOM element, in this example .owl-carousel
+                var items = event.item.count;     // Number of items
+                var item = event.item.index + 1;     // Position of the current item
+
+                // it loop is true then reset counter from 1
+                if (item > items) {
+                    item = item - items
+                }
+                $('#counter').html("item " + item + " of " + items)
+            }
+        }); 
+    </script>
+
+
+    <script type="text/javascript">
+        $('.owlToper').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: false,
+            // items: 1,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                // 600: {
+                //     items: 3
+                // },
+                // 1000: {
+                //     items: 4
+                // }
+            }
+        })
+    </script>
+</body>
+
+</html>

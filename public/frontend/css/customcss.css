@@ -1,0 +1,1211 @@
+/* a{
+	color:#767676;
+}
+a:hover{
+	color:#767676 !important;
+	text-decoration:underline;
+} */
+:required:focus {
+    border: 1px solid #e91e63;
+    outline: none;
+  }
+
+  .sv_error
+  {
+    color: #e91e63;
+    padding-bottom:12px;
+	font-weight: 600;
+    font-style: italic;
+  }
+
+  #send
+  {
+    background-color: #26b400;
+    color:#fff;
+  }
+
+  #remove
+  {
+    background-color: crimson;
+    color: #fff;
+  }
+
+  #accept
+  {
+    background-color: #26b400;
+    color:#fff;
+  }
+
+  #reject
+  {
+    background-color: crimson;
+    color: #fff;
+  }
+  #remove_teamjoin
+  {
+    background-color: crimson;
+    color:#fff;
+  }
+
+  #accept_teamjoin
+  {
+    background-color: #26b400;
+    color:#fff;
+  }
+
+  #reject_teamjoin
+  {
+    background-color: crimson;
+    color: #fff;
+  }
+
+  #remove_teammember
+  {
+    background-color: crimson;
+    color: #fff;
+  }
+
+  .ClockAuto{
+    float: right;
+    margin-top: -41px;
+    font-size: 30px;
+    color: #7BB3D6;
+    font-family: "lato";
+  }
+  .LettrSpcng{
+    letter-spacing: 1.2rem;
+    width:75%;
+  }
+.go_back{
+  margin-left:23%;
+  text-decoration:underline;
+  color:white;
+}
+
+.password_strength{
+  margin-bottom: 0;
+  margin-top: 1rem;
+  background-color: #b1cddf;
+  border-radius: 50px;
+  color: #003b5f;
+  font-weight: bold;
+  width: 60%;
+
+}
+.team_name
+{
+  width:88%;
+  float:right;
+
+}
+.time-min input:focus{
+  border:0;
+}
+.time-min input{
+
+  border: 0;
+    background-color: #ebebeb;
+    width: 15%;
+    color: gray;
+    font-size: 13px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.WithoutPass{
+	color:#fff;
+	font-size:18px;
+	padding: 0px 0px 12px 16px;
+	font-weight: 400;
+	line-height: 22px;
+}
+.OptionStyle{
+	color: #b1cddf;
+	font-weight: 400;
+}
+.CRetPassW{
+	color:#fff;
+	font-weight: 400;
+}
+.AutoFillOff input{
+	autocomplete: off;
+}
+input#user_email {
+}
+#popup_4 .form-header{
+color:#fff;
+}
+.custom_a:hover{
+	cursor:pointer;
+}
+.pause{
+  position: relative;
+  z-index: 111;
+}
+
+.game-logo {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  overflow: hidden;
+  align-items: center;
+
+}
+
+.Copmetition-Placeholder{
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+.soccer-form-data-Scroll{
+  height: 765px;
+  overflow-x: hidden;
+}
+
+#squadModal_teamOne .modalfootbal {
+  max-width: 80% !important;
+}
+#squadModal_teamTwo .modalfootbal {
+  max-width: 80% !important;
+}
+
+#minutes{
+	cursor:pointer;
+}
+.detail-match-report{
+	margin-top:0 !important;
+}
+.player-jersy-list.myvoting .jersy-star {
+    color: #ffd200;
+}
+.btn-grey{
+	color: #fff;
+    background-color: #6c757d;
+}
+
+/* .photo-frame:after{
+	height: 260px !important;
+} */
+@media (min-width: 1200px){
+.games-list li {
+	width: 123px !important;
+}
+}
+
+
+
+.swal-footer{
+	text-align:center !important;
+
+}
+.swal-button{
+	background-color: #002339 !important;
+}
+
+/* KO CUP round accepted team icon */
+.green-bgRightFirst {
+    background-color: #003b5f;
+    border-radius: 50px;
+    padding: 4px;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+}
+
+/* Banner Preview  */
+.PreviewBnnr {
+    position: absolute;
+    top: -33px;
+    right: 0;
+    color: #e91e63;
+}
+.btn-PreviewBnnr{
+
+	color: #e91e63;
+    background: #f1f3f6;
+    padding: 2px 10px;
+    border: 1px solid #c1c1c1;
+	font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+.btn-PreviewBnnr:hover {
+    color: #e91e63;
+}
+.fixme {
+  z-index: -11111;
+}
+
+.team-details h3 a{
+
+	color: #fff;
+}
+ .TeamSponSorsComp {
+    width: 44% !important;
+ }
+
+ .select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    z-index: 11111;
+}
+
+#add_referee .select2 {
+    width: 100% !important;
+}
+#add_admin .select2 {
+	width: 100% !important;
+}
+#add_player_modal .select2 {
+	width: 100% !important;
+}
+.vote-page .img-fluid-Custom{
+  width: 230px;
+    height: 230px;
+    border-radius: 100%;
+}
+
+/* .SponsorSTeam li{ */
+	/* display: inline-flex; */
+/* } */
+.SponsorSTeam li img{
+	height:75px;
+}
+.dots-paging .page-item .page-link {
+
+    cursor: pointer;
+}
+.btn-crossSocial{
+	display:inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 15px;
+    padding: 0;
+    background: red;
+    top: 5px;
+    right: 0;
+    color: #fff !important;
+	cursor:pointer;
+}
+.Player-btn-cross{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 15px;
+    padding: 0;
+    background: red;
+    top: 5px;
+    right: 0;
+    color: #fff !important;
+	cursor:pointer;
+}
+/* .SergiTeam:hover .btn-crossSocial{
+	display: inline-block;
+} */
+
+
+
+.CreateTeam .select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    z-index: 111 !important;
+    width: 100% !important;
+
+}
+.CreateTeam .select2-container--default .select2-selection--multiple {
+    background-color: #f1f3f6;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text;
+    padding-bottom: 5px;
+    padding-right: 5px;
+
+}
+.CreateTeam .select2-container--default .select2-search--inline .select2-search__field {
+    background: transparent;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: textfield;
+    height: 47px;
+}
+.start_competition_btn{
+	background: #003b5f!important;
+	border-radius: 10px;
+}
+.start_competition_btn:hover{
+	color: #fff;
+	text-decoration:underline;
+}
+.Competitionn-Page-Additional span.EditProfileOne{
+    position: absolute !important;
+    background: #ed1662;
+    border-radius: 100%;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    z-index: 1;
+}
+
+.Competitionn-Page-Additional .Edit-Icon-Banner:before {
+  content: "\f044";
+    font-family: 'icomoon' !important;
+    color: #ffffff;
+    font-size: 28px;
+    float: right;
+    top: -308px;
+    position: relative;
+
+    background: #ed1662;
+    border-radius: 100%;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+}
+
+.Competitionn-Page-Additional .OnSun{
+	text-transform:uppercase;
+}
+.dashboard-wrap .create-box img{
+	float:right;
+}
+.AddPlayerStyle {
+    font-size: 18px;
+    font-weight: 500;
+    color: #e91e65;
+
+}
+.Competitionn-Page-Additional .TeamPlayersSlider .owl-dots{
+  display: block;
+}
+.Competitionn-Page-Additional .TeamPlayersSlider .owl-prev{
+  display: none;
+}
+.Competitionn-Page-Additional .TeamPlayersSlider .owl-next{
+  display: none;
+}
+
+.Edit-Team-player-jerseyno:before {
+  content: "\f044";
+  font-family: 'icomoon' !important;
+  font-size: 21px;
+}
+.ijabo-cropper-modal.ijabo-cropper-modal.open {
+  display: block;
+  opacity: 1;
+  z-index: 111111;
+}
+.Team-btn-cross{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 15px;
+  padding: 0;
+  background: red;
+  top: 5px;
+  right: 0;
+  color: #fff !important;
+}
+.Squad-particpt-selected{
+  color: #fff;
+  background-color: #04b545;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+iframe {
+  border: 0;
+  width: 100%;
+}
+
+.modal-body .floating-form  .form-select-fancy-1 .select2-container--default {
+  width: 100% !important;
+}
+.CreateTeam .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #e4e4e4;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 0;
+  padding-left: 3px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.about_us_height
+{
+  height:auto;
+  overflow:hidden;
+  width:100%;
+}
+.offical_community_images
+{
+  height:450px;
+  overflow:auto;
+  width:100%;
+}
+.suggestion-list {
+  background-color: #fff;
+  padding: 18px 24px 6px 12px;
+  border-radius: 6px;
+  position: absolute;
+  width: 150%;
+  margin-top: 0px;
+  border: 2px solid #013b60;
+  border-top: none;
+  top: 50px;
+  z-index: 11;
+  overflow-y: scroll;
+  height: 25vh;
+}
+
+.suggestion-list p {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #013b60;
+}
+
+.suggestion-list a:hover {
+color: #013b60;
+}
+
+.FaCupClor a:hover{
+  color: #065596;
+}
+.comp_a:hover {
+  color: #013b60 !important;
+  }
+.suggestion-list img {
+  margin-right: 12px;
+}
+small{
+  color: #013b60;
+}
+.text-bolder small{
+  color: #fff !important;
+}
+.owlWidthAuto{
+  width:auto;
+}
+
+.jersy-nooo {
+  width: 26px;
+   padding: 0px;
+  height:20px;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  line-height: 20px;
+  left:-32px;
+  z-index: 1;
+}
+
+.play-ground span.jersy-nooo {
+  width: 26px;
+  padding: 0px;
+  height:20px;
+  font-weight: bold;
+  position: absolute;
+  line-height: 20px;
+  left:35%;
+  z-index: 1;
+}
+
+#public_squadModal .modalfootbal{
+  max-width: 80% !important;
+}
+.substitute_players{
+  margin-top: 5px;
+    margin-bottom: 10px;
+    background: #929292;
+    border-radius: 5px;
+    color: #000;
+    padding: 1px;
+}
+.CommunitySPONSORS .owl-nav{
+  display: none;
+
+}
+.CommunitySPONSORS .owl-dots{
+  display: block;
+}
+.owlfixturetable .owl-nav{
+  display: none !important;
+}
+.owlfixturetable .owl-dots{
+  display: block !important;
+}
+.owlRequestStatus  .owl-nav{
+  display: none !important;
+}
+.Team-pub-pro .Team-Fixture .owlfixturetable .owl-drag .owl-item{
+  margin-right: 10px  !important;
+}
+
+
+.owlfixturetable.owl-carousel.owl-theme.owl-loaded.owl-drag .owl-item {
+  margin-right: 10px !important;
+}
+.icon-plyr {
+  z-index: 11 !important;
+}
+.box-outer-lightpink .list-group-numbered>li::before {
+    content: "";
+    counter-increment: none;
+}
+#playerprofile a, #playerprofile .create-box h3 small{
+	color:#fff;
+}
+
+#playerprofile a:hover{
+	color:#fff !important;
+
+}
+.btn-Blue:hover, .NewshedingPost a:hover, .vote-page button:hover, #recordStats .btn-lg{
+	color:#fff !important;
+}
+.squardtxt:hover{
+	color:#fff !important;
+	text-decoration:underline;
+}
+.header-page a:hover{
+	color:#d70a12 !important;
+}
+.CommunitySPONSORS .owl-item img {
+
+    width: auto;
+}
+.player-jersy-list .score01 {
+  background: #fff !important;
+  color: #fff !important;
+    padding: 5px 2px !important;
+    border-radius: 50px !important;
+    margin-top: 5px !important;
+    height: 25px !important;
+    width: 25px !important;
+}
+.KoAdminViewDrop {
+    padding-bottom: 2px !important;
+    padding-top: 4px !important;
+    padding-left: 4px !important;
+  }
+  .radio-fancy{
+    cursor:pointer !important;
+  }
+
+
+
+  /*// Donut Css*/
+  .Competitionn-Page-Additional .donut__slice__first_left {
+    --first-start: 0;
+  }
+
+.Competitionn-Page-Additional .donut__slice__first_left::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg));
+}
+
+.Competitionn-Page-Additional .donut__slice__first_left::after {
+  border-top-color: #64b102;
+  border-right-color: rgba(100, 177, 2, calc(100 * (var(--first) - .25)));
+  border-bottom-color: rgba(100, 177, 2, calc(100 * (var(--first) - .5)));
+  border-left-color: rgba(100, 177, 2, calc(100 * (var(--first) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+}
+.Competitionn-Page-Additional .donut__slice__first_right {
+  --first-start: 0;
+}
+.Competitionn-Page-Additional .donut__slice__first_right::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg));
+}
+
+.Competitionn-Page-Additional .donut__slice__first_right::after {
+  border-top-color: #64b102;
+  border-right-color: rgba(100, 177, 2, calc(100 * (var(--first) - .25)));
+  border-bottom-color: rgba(100, 177, 2, calc(100 * (var(--first) - .5)));
+  border-left-color: rgba(100, 177, 2, calc(100 * (var(--first) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+.Competitionn-Page-Additional .donut__slice__second_left {
+  --second-start: calc(var(--first));
+  --second-check: max(calc(var(--second-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+}
+.Competitionn-Page-Additional .donut__slice__second_left::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg));
+}
+
+.Competitionn-Page-Additional .donut__slice__second_left::after {
+  border-top-color: #5a5a5a;
+  border-right-color: rgba(90, 90, 90, calc(100 * (var(--second) - .25)));
+  border-bottom-color: rgba(90, 90, 90, calc(100 * (var(--second) - .5)));
+  border-left-color: rgba(90, 90, 90, calc(100 * (var(--second) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+}
+.Competitionn-Page-Additional .donut__slice__second_right {
+  --second-start: calc(var(--first));
+  --second-check: max(calc(var(--second-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+}
+.Competitionn-Page-Additional .donut__slice__second_right::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg));
+}
+
+.Competitionn-Page-Additional .donut__slice__second_right::after {
+  border-top-color: #5a5a5a;
+  border-right-color: rgba(90, 90, 90, calc(100 * (var(--second) - .25)));
+  border-bottom-color: rgba(90, 90, 90, calc(100 * (var(--second) - .5)));
+  border-left-color: rgba(90, 90, 90, calc(100 * (var(--second) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+}
+.Competitionn-Page-Additional .donut__slice__third_left {
+  --third-start: calc(var(--first) + var(--second));
+  --third-check: max(calc(var(--third-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+}
+.Competitionn-Page-Additional .donut__slice__third_left::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg));
+}
+
+.Competitionn-Page-Additional .donut__slice__third_left::after {
+  border-top-color: #dd0a00;
+  border-right-color: rgba(221, 10, 0, calc(100 * (var(--third) - .25)));
+  border-bottom-color: rgba(221, 10, 0, calc(100 * (var(--third) - .5)));
+  border-left-color: rgba(221, 10, 0, calc(100 * (var(--third) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+}
+.Competitionn-Page-Additional .donut__slice__third_right {
+  --third-start: calc(var(--first) + var(--second));
+  --third-check: max(calc(var(--third-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+}
+.Competitionn-Page-Additional .donut__slice__third_right::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg));
+}
+
+.Competitionn-Page-Additional .donut__slice__third_right::after {
+  border-top-color: #dd0a00;
+  border-right-color: rgba(221, 10, 0, calc(100 * (var(--third) - .25)));
+  border-bottom-color: rgba(221, 10, 0, calc(100 * (var(--third) - .5)));
+  border-left-color: rgba(221, 10, 0, calc(100 * (var(--third) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+@media (min-width: 576px){
+  #editdescModal .modal-dialog {
+    max-width: 857px !important;
+    margin: 1.75rem auto;
+}
+}
+.text_editor_desc_color div{
+  color:#000;
+}
+trix-toolbar .trix-button-group:not(:first-child) {
+  margin-left: 1.5vw;
+  display: none;
+}
+/* Css for player selection on dashboard */
+@media (min-width: 576px){
+  #accept_request .modal-dialog {
+    max-width: 850px !important;
+    margin: 1.75rem auto;
+}
+}
+.select_player{
+  border: 1px solid #ccc;
+    border-radius: 15px;
+  margin:2px;
+  font-size:small;
+}
+.btn-green:hover {
+  color: #fff !important;
+}
+
+.select_player button.select_player_btn{
+  border: none;
+  background: transparent;
+  color: #f00;
+}
+.comp_start0
+{
+  cursor:pointer;
+}
+.icsfile_leauge{
+  cursor:pointer;
+}
+.custom_editable{
+  width:695px;
+  border:none;
+}
+.custom_editable::placeholder {
+  position: absolute;
+    margin-top: -3px;
+    font-size: 22px;
+    color: #98A5B1;
+    pointer-events: none;
+}
+.custom_counter{
+  color: #333;
+  display: block;
+  font-weight: 500;
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #aab8c2;
+}
+.custom_right-info{
+  background-image: url(https://weichiachang.github.io/easter-eggs-mobile/images/dNpCLDT.png);
+    background-repeat: no-repeat;
+    background-size: 500px 287px;
+    background-position: -242px -245px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+@media (min-width: 576px){
+  #edit_playerinfo .modal-dialog {
+    max-width: 650px !important;
+    margin: 1.75rem auto;
+}
+}
+@media (min-width: 576px){
+  #FollowerModal .modal-dialog {
+    max-width: 80% !important;
+    margin: 1.75rem auto;
+}
+}
+@media (min-width: 576px){
+  #FullStatTable .modal-dialog {
+    max-width: 95% !important;
+}
+}
+.Addrule:hover {
+  color: #fff !important;
+}
+.Addrule {
+  color: #fff !important;
+}
+.post_span{
+  padding: 9px 18px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #e91e63;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: background 0.2s ease;
+}
+.custom_select_width{
+  width: 90% !important;
+}
+.custom_playeraboutus{
+  z-index: 1040 !important;
+}
+.playerFullStatTable{
+  font-size:10px;
+  border-collapse: unset !important;
+}
+#ResultHolderDiv{
+  height:120px !important;
+}
+
+.ViewfixtureIcon:before{
+  font-family: 'icomoon' !important;;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+  font-size: 30px;
+}
+.FullStatCompCol{
+  background-color:#003b5f;
+  color: #ffffff;
+  text-align:left;
+}
+.FullStatCompCol a{
+  color:#fff;
+}
+.word-wrap{
+  word-wrap: break-word;
+}
+
+.rule-set{
+  cursor: context-menu;
+}
+.comp_list_scroll{
+  overflow: auto;
+  height: 50vh;
+}
+.comp_list_scroll thead th { position: sticky; top: 0; z-index: 1; }
+.comp_list_scroll thead th { background-color:#003b5f; color: #ffffff; }
+.mvp{
+  width:135px;
+}
+.ManCity a:hover{
+  color: #135e9b;
+}
+.responsive-tabsOnMObileNew {
+
+  padding: 5px 0px 0px 0px;
+
+}
+.responsive-tabsOnMObileNew .responsive-tabs.nav-tabs.open > li a {
+
+  line-height: 1.2;
+}
+.responsive-tabsOnMObileNew .responsive-tabs.nav-tabs > li > a {
+
+  line-height: 1.2;
+}
+a.FullStat {
+  cursor: pointer;
+}
+@media (min-width: 576px){
+  #editModal .modal-dialog {
+    max-width: 567px !important;
+}
+}
+#join_login_modal.modal.fade.show {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#join_login_modal .modal-dialog {
+  background: #003b5f;
+  border-radius: 15px;
+}
+
+#join_login_modal .modal-dialog .modal-content {
+  background: #003b5f;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#join_login_modal .modal-header {
+  border: none;
+}
+
+#join_login_modal .modal-header h4 {
+  color: #b1cddf;
+  font-size: 38pt;
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+@media (min-width: 576px){
+  #join_login_modal .modal-dialog {
+    max-width: 590px !important;
+    margin: 1.75rem auto;
+}
+}
+input.bg-Clor:focus {
+  background: #fff;
+  color: #000;
+  padding: 10px;
+}
+input.bg-Clor {
+  padding: 10px;
+}
+.Drawmatch
+{
+  height: 15px;
+  width: 15px;
+  background-color: #aaa7a7;
+  border-radius: 100px;
+  margin: 6px auto;
+  color: #c6c6c6;
+  left: 5px;
+  position: relative;
+}
+
+.VotingOpenClor {
+  left: 5px;
+  position: relative;
+}
+
+.game-logoPopup img{
+  display: block;
+}
+.site-logo {
+    width: 185px;
+    height: 43px;
+  }
+
+  #ResultHolderDiv {
+    /* width: max-content; */
+    width: auto;
+}
+/* Home page css */
+	.EmailSection{
+		position: relative;
+    bottom: 238px;
+
+    padding-left: 70px;
+	}
+	.FormBG	.FooterForm {
+    border: 1px solid #013b60;
+    background-color: #013b60;
+    padding: 20px 21px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 30px #224359;
+}
+.bg-Clor{
+	background-color: #013b60;
+	border: unset;
+	color: #87c1e5;
+}
+input.bg-Clor:focus {
+    background: #013b60;
+    color: #87c1e5;
+}
+.bg-Clor::-webkit-input-placeholder {
+  color: #87c1e5;
+}
+.D-FSpacng{
+  display:flex !important;
+}
+.btn-Blue{
+  text-transform: none !important;
+}
+.WH-80{
+    width: 75px;
+    height: 75px;
+}
+i.fa.text-primary{
+    color: #808080 !important;
+}
+.emphasis {
+    text-align: right;
+    padding: 0px 15px;
+}
+.SuggestionFollow .fanprofile_btn {
+
+    border-radius: 5px !important;
+}
+.SuggestionFollow .fanprofile_btn:hover {
+
+    color: #ffffff;
+}
+.SuggestionFollow .profile_view {
+    box-shadow: unset;
+    border: 1px solid #e1e1e1;
+    border-radius: 0px;
+    border-radius: 10px;
+    border-bottom: 3px solid #E6E9ED;
+    overflow: hidden;
+    margin-top: 8px;
+}
+.SuggestionFollow .profile_view:hover {
+
+    /* box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 25%), 0px 0px 10px 0 rgb(0 0 0 / 16%); */
+    box-shadow: unset;
+    border-bottom: 3px solid #0c3b5d;
+border-radius: 10px;
+overflow: hidden;
+}
+.SuggestionFollow .well.profile_view .left {
+    margin: 12px 10px;
+}
+.imgCenter{
+
+}
+.emphasis .btn-xs{
+    font-size: 14px;
+}
+.SuggestionFollow .well.profile_view .bottom {
+
+    display: block;
+}
+.SuggestionFollow .well.profile_view .left p {
+
+    width: 98%;
+    margin-bottom: 0px;
+    color: #000;
+}
+.SuggestionFollow .create-profile{
+    background-color: #fff;
+}
+.SuggestionFollow .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    background: #fff;
+    padding: 5px 0px 0px 0px;
+    border-radius: 10px 10px 0 0;
+}
+.SuggestionFollow .nav-link {
+    padding: 0.5rem 30px;
+    margin-left: 8px;
+}
+.SuggestionFollow .nav-tabs .nav-link:focus,
+.SuggestionFollow .nav-tabs .nav-link:hover {
+    border-color: #0c3b5d00 #0c3b5d00 #0c3b5d00;
+  color: #0c3b5d;
+  background-color: #fff;
+}
+.SuggestionFollow .nav-tabs .nav-link {
+
+    line-height: initial;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+.SuggestionFollow .owl-nav{
+display: none;
+}
+.alighCenter{
+    align-items: center;
+    display: flex;
+    color: #0c3b5d;
+
+}
+.alighCenter h2{
+    font-size: 18px !important;
+
+}
+.SuggestionFollow .heading-navy h4 {
+    border-bottom: 1px solid #003b5f;
+    color: #003b5f;
+    padding: 5px 0 5px 0;
+}
+.pLR-15{
+    padding: 0px 15px ;
+}
+.SuggestionFollow .well.profile_view .bottom {
+    margin-top: 0px;
+
+}
+.mx-auto .create-profile {
+    background: #E2E4E7;
+    display: flow-root;
+
+}
+.SuggestionFollow .Round-Tab .nav-tabs .nav-item.show .nav-link,
+.SuggestionFollow .nav-tabs .nav-link.active {
+    color: #ffffff !important;
+    background-color: #003b5f !important;
+    border-color: #003b5f #003b5f #003b5f !important;
+    line-height: 1;
+    -webkit-box-shadow: 0px -2px 3px 0px rgba(148, 148, 148, 0.62);
+    -moz-box-shadow: 0px -2px 3px 0px rgba(148, 148, 148, 0.62);
+    box-shadow: 0px -1px 2px 0px rgba(148, 148, 148, 0.62);
+}
+
+.SuggestionFollow .owl-theme .owl-dots .owl-dot:hover
+{
+    margin-bottom: -5px;
+}
+
+.alignRef
+{
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container {
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;
+    background-color: #161615;
+    height: 1px;
+    margin-top: 10%;
+}
+
+.FollowersSection h4.brief {
+  border-bottom: 1px solid #003b5f;
+  color: #003b5f;
+  padding: 5px 0 5px 0;
+}
+.FollowersSection .well.profile_view .bottom {
+  margin-top: 13px;
+  
+}
+.FollowersSection .profile_view{
+  border-radius: 10px;
+  box-shadow: unset;
+  border-bottom: 3px solid #F2F5F7;
+  overflow: hidden;
+  
+}
+.FollowersSection .profile_view:hover{
+  border-radius: 10px;
+  box-shadow: unset;
+  border-bottom: 3px solid #003b5f;
+  
+}
+.FollowersSection .well.profile_view {
+  background: #fbfbfb;
+}
+.FollowersSection .emphasis {
+  text-align: center;
+ 
+}
+#regForm1 button:hover {
+  opacity: 1;
+  color: #fff;
+}
+button#step_one:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.paginationCustomSvg svg{
+  width: 50px;
+  
+}
