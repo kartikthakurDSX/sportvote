@@ -22,37 +22,38 @@ use Illuminate\Support\Facades\Auth;
 
 class MatchfixtureSubmitDetailStat extends Component
 {
-    public $match_fixture;
-    public $match_fixture_id;
-    public $player = [];
-    public $team_id = "";
-    public $player_id = "";
+    public $add_stat = [];
+    public $comp_data = "";
+    public $comp_id = "";
     public $first_half_fixture_player_stat = [];
-    public $first_red_card_player;
-    public $first_yellow_card_player;
-    public $second_half_fixture_player_stat = [];
-    public $second_red_card_player;
-    public $second_yellow_card_player;
-    public $match_fixture_stats;
+    public $first_red_card_player = "";
+    public $first_yellow_card_player = "";
+    public $f_lineup_player_id = "";
+    public $listeners = ['refreshData'];
+    public $match_fixture = "";
+    public $match_fixture_id = "";
+    public $match_fixture_stats = "";
+    public $match_half_time;
+    public $onclick = false;
+    public $player = [];
+    public $player_id = "";
+    public $player_pic = "";
+    public $player_profile_pic = "";
     public $player_stat_input = [];
     public $player_stat_input2 = [];
-    public $save_player_stat_input;
-    public $save_player_stat_input2;
-    public $notification_users = [];
-    public $team_image;
-    public $player_profile_pic;
-    public $tie_winner_teamId;
-    public $onclick = false;
-    public $player_pic;
-    public $player_stat_min;
-    public $player_stat_sec;
-    public $add_stat = [];
+    public $player_stat_min = "";
+    public $player_stat_sec = "";
+    public $save_player_stat_input = "";
+    public $save_player_stat_input2 = "";
     public $second_half_add_stat = [];
-    public $comp_id;
+    public $second_half_fixture_player_stat = [];
+    public $second_red_card_player = "";
+    public $second_yellow_card_player = "";
     public $span_class = [];
-    public $match_half_time;
-    public $f_lineup_player_id;
-    public $listeners = ['refreshData'];
+    public $team_id = "";
+    public $team_image = "";
+    public $tie_winner_teamId = "";
+
 
 
     public function refresh()
@@ -61,9 +62,7 @@ class MatchfixtureSubmitDetailStat extends Component
     }
     public function refreshData()
     {
-        // Your logic to refresh data goes here
-        // For example, you can fetch updated data and update public properties used in the component
-        $this->dispatch('refreshDataComplete'); // Optional: Emit an event to signal that data refresh is complete
+        $this->dispatch('refreshDataComplete');
     }
 
     public function mount($match_fixture)
@@ -72,10 +71,10 @@ class MatchfixtureSubmitDetailStat extends Component
         $m_f = Match_fixture::find($this->match_fixture_id->id);
         $this->team_image = Team::find($m_f->teamOne_id);
         $this->comp_id = $m_f->competition_id;
-        $comp_data = Competition::find($this->comp_id);
-        $this->match_half_time = $comp_data->competition_half_time;
+        $this->comp_data = Competition::find($this->comp_id);
+        $this->match_half_time = $this->comp_data->competition_half_time;
     }
-    public function render()
+    public function render1()
     {
         $match_fixture = Match_fixture::with('teamOne:id,name,team_logo', 'teamTwo:id,name,team_logo', 'competition')->find($this->match_fixture->id);
         $fixture_lapse_type = Match_fixture_lapse::where('match_fixture_id', $this->match_fixture_id->id)->orderBy('id', 'desc')->latest()->first();
@@ -93,14 +92,9 @@ class MatchfixtureSubmitDetailStat extends Component
         }
 
         if (!($this->team_id)) {
-            // $this->player = Fixture_squad::where('match_fixture_id',$match_fixture->id)->where('team_id',$match_fixture->teamOne_id)->with('player')->get();
-
             $this->player = Competition_attendee::where('Competition_id', $match_fixture->competition_id)->where('team_id', $match_fixture->teamOne_id)->with('player')->get();
 
-            // $first_player = Fixture_squad::where('match_fixture_id',$match_fixture->id)->where('team_id',$match_fixture->teamOne_id)->pluck('player_id')->first();
-
-            $first_player =
-            Competition_attendee::where('Competition_id', $match_fixture->competition_id)->where('team_id', $match_fixture->teamOne_id)->pluck('attendee_id')->first();
+            $first_player = Competition_attendee::where('Competition_id', $match_fixture->competition_id)->where('team_id', $match_fixture->teamOne_id)->pluck('attendee_id')->first();
             if (!empty($first_player)) {
                 $first_player_id = $first_player;
             } else {
@@ -153,7 +147,32 @@ class MatchfixtureSubmitDetailStat extends Component
         $match_fix_stats = Match_fixture_stat::where('match_fixture_id', $this->match_fixture_id->id)->get();
 
         $comps = Competition::select('competition_half_time')->where('id', $match_fixture->competition_id)->latest()->first();
-        dd($match_fixture);
+        $this->match_fixture = Match_fixture::with('teamOne:id,name,team_logo', 'teamTwo:id,name,team_logo', 'competition')->find($this->match_fixture->id);
+        $this->match_fixture_id = $match_fixture->id;
+        return view('livewire.matchfixture-submit-detail-stat', compact('fixture_lapse_type', 'match_fixture', 'stat', 'admins', 'match_fix_stats', 'second_half_stats', 'lineup_player_id', 'comps'));
+    }
+
+    public function render(){
+        $fixture_lapse_type = Match_fixture_lapse::where('match_fixture_id', $this->match_fixture->id)->orderBy('id', 'desc')->latest()->first();
+        $match_fixture = Match_fixture::with('teamOne:id,name,team_logo', 'teamTwo:id,name,team_logo', 'competition')->find($this->match_fixture->id);
+
+        $detailed_stats = StatTrack::select('Stat_ids')->where('tracking_type', 1)->where('tracking_for', $match_fixture->competition->id)->where('is_active', 1)->latest()->first();
+            $stats_array = array();
+            if (!empty($detailed_stats)) {
+                $stats_array = explode(',', $detailed_stats->Stat_ids);
+            }
+        $stat = Sport_stat::whereIn('id', $stats_array)->where('is_active', 1)->get();
+
+
+        $comp_admins = Comp_member::where('comp_id', $match_fixture->competition_id)->where('member_position_id', 7)->where('invitation_status', 1)->where('is_active', 1)->pluck('member_id');
+        $admins = $comp_admins->toArray();
+
+        $match_fix_stats = Match_fixture_stat::where('match_fixture_id', $this->match_fixture_id->id)->get();
+
+        $second_half_stats = Match_fixture_stat::where('match_fixture_id', $this->match_fixture_id->id)->where('team_id', $match_fixture->teamOne_id)->where('sport_stats_id', 14)->count();
+
+        $lineup_player_id = $match_fixture->teamOne_id;
+        $comps = Competition::select('competition_half_time')->where('id', $match_fixture->competition_id)->latest()->first();
         return view('livewire.matchfixture-submit-detail-stat', compact('fixture_lapse_type', 'match_fixture', 'stat', 'admins', 'match_fix_stats', 'second_half_stats', 'lineup_player_id', 'comps'));
     }
 

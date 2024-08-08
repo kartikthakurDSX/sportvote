@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Models;
+namespace app\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class user_friend extends Model
+class User_friend extends Model
 {
     use HasFactory;
     public $fillable = [
         'user_id',
         'friend_id',
         'request_status',
-        
+
     ];
     public function sender()
     {
@@ -22,7 +22,7 @@ class user_friend extends Model
     {
         return $this->hasMany(User::class, 'id', 'friend_id');
     }
-  
+
     public function notification()
     {
         return $this->belongsTo(User::class);

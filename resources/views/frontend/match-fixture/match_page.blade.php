@@ -13,16 +13,11 @@
 		</div>
 	</div>
 	
-
- 
-
-
-
   <main id="main">
 	<div class="container">
         <div class="row header-page">
 		<div class="col-lg-12">
-           <h2>Nigerian Premier League  <span class="float-md-end"><button class="btn btn-green" data-bs-target="#recordStats" data-bs-toggle="modal"><img src="images/noun_stats.png" alt="" class="btn-icon">Submit detailed Stats</button> <button class="btn btn-submit"> <img src="images/noun_finish.png" alt="" class="btn-icon"> Finish Match</button></span> </h2>
+           <h2>Nigerian Premier League  <span class="float-md-end"><button class="btn btn-green" data-bs-target="#recordStats" data-bs-toggle="modal"><img src="images/noun_stats.png" alt="" class="btn-icon">Submit detailed Statssss</button> <button class="btn btn-submit"> <img src="images/noun_finish.png" alt="" class="btn-icon"> Finish Match</button></span> </h2>
 		</div>
 		</div>
 	   
@@ -71,7 +66,7 @@
         </div>
       </div>
     
-		<div class="row mt-3>
+		<div class="row mt-3">
 			<div class="col-md-5 position-relative">
 			
 				<div class="player-jersy-list">

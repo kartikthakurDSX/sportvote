@@ -1,7 +1,7 @@
 @include('frontend.includes.header')
 <div class="header-bottom">
 	<div class="container">
-		<div class="row">
+		<div class="row"> 
 			<div class="col-lg-12">
 				<h1><span class="icon-noun-s icon-noun-circle noun_Trophy"></span><strong> Competition List</strong></h1>
 			</div>
@@ -309,6 +309,52 @@
 	<script src="{{url('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 	<script src="{{url('frontend/js/script.js')}}"></script>
 	<script src="{{url('frontend/js/main.js')}}"></script>
+<!--
+	<script>
+	$(document).on('click','.accept', function(){
+		var comp_req_id = $(this).val();
+		// alert(comp_req_id);
+		$.ajax({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
+			url:'{{url("select_players")}}',
+			type:'post',
+			data:{comp_req_id:comp_req_id},
+			error:function(){
+
+			},
+			success:function(response)
+			{
+
+				html = "<h3>Select Player</h3><table class='table table-striped table-bordered table-sm'><form id='selectplayerform'><thead><tr><th>Player </th><th> Player Name</th><th>Player Position</th><th>Select</th></tr></thead>";
+
+					$.each(response, function(key, value){
+					html += "<tr><td><img height='100px' src = '{{url('frontend/profile_pic')}}/"+value.members.profile_pic+"' </td><td>"+value.members.first_name+"</td><td>"+value.member_position.name+"</td>";
+					if(value.jersey_number)
+					{
+						html += "<td><input type='checkbox' name='attendee_id' class='select' value='"+value.member_id+"'></td></tr>";
+					}
+					else
+					{
+						html += "<td>Give jersey number to player</td>";
+					}
+				});
+
+
+				$('#player').html(html+"<tr><td colspan = '4'><input type='hidden' value='"+comp_req_id+"' id='comp_req_id' name='comp_req_id'> <button class='btn btn-success float-md-end' id='selectplayer'>Submit</buton> </td></tr></form></table> ");
+
+
+
+			}
+		});
+
+	});
+
+
+</script> -->
+
+
 <script>
 	$(document).on('click','#selectplayer',function(){
 		var comp = $('#comp_req_id').val();
@@ -342,7 +388,7 @@
 					}
 					if(response.competition_id)
 					{
-						
+						window.location.href = "{{url::to('competition')}}/"+ response.competition_id;
 					}
 				}
 			   });
