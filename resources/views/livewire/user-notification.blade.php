@@ -799,8 +799,8 @@
 <script>
     window.addEventListener('swal:modal', event => {
         swal({
-            title: event.detail.message,
-            text: event.detail.text,
+            title: event.detail[0].message,
+            text: event.detail.message,
             icon: event.detail.type,
         });
     });

@@ -1,4 +1,4 @@
-<?php 
+<?php
 $start = microtime(true);
 $centerIndex = null;
 ?>
@@ -96,7 +96,7 @@ $centerIndex = null;
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 <!-- close div of site wrap i.e. on header page-->
 
 <main id="main" class="dashboard-wrap Team-Public-Profil Competitionn-Page Competitionn-Page-Additional  KoAdminView League-page">
@@ -743,7 +743,7 @@ $centerIndex = null;
 		                                              	 <?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 		                                            </div>
 		                                            <div class="donut__label__sub">
-		                                              PLAYED 
+		                                              PLAYED
 		                                            </div>
 	                              				</div>
 	                            			</div>
@@ -763,7 +763,7 @@ $centerIndex = null;
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -783,7 +783,7 @@ $centerIndex = null;
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -824,7 +824,7 @@ $centerIndex = null;
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div> <?php
@@ -858,7 +858,7 @@ $centerIndex = null;
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -893,7 +893,7 @@ $centerIndex = null;
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -934,7 +934,7 @@ $centerIndex = null;
 														<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 													</div>
 													<div class="donut__label__sub">
-													PLAYED 
+													PLAYED
 													</div>
 												</div>
 											</div> <?php
@@ -1066,7 +1066,7 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
@@ -1086,7 +1086,7 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div> <?php
@@ -1105,7 +1105,7 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
@@ -1145,7 +1145,7 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div> <?php
@@ -1179,7 +1179,7 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
@@ -1213,11 +1213,11 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
-				                                    <?php 
+				                                    <?php
 													}elseif($firstR_won != 0 && $firstR_draw != 0 && $firstR_lost != 0)
 													{
 														$Rmultiplyer = (int)(100/count($firstR_played));
@@ -1254,10 +1254,10 @@ $centerIndex = null;
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
-				                            			</div> 
+				                            			</div>
 													<?php
 														}
 													?>
@@ -1522,9 +1522,9 @@ $centerIndex = null;
 														@if($fixtures->count() > 0)
 															<div class="Scrollbar-card">
 																@foreach($fixtures as $fix)
-																	<?php 
+																	<?php
 																		$teamOne = App\Models\Team::select('id','name','team_logo')->find($fix->teamOne_id);
-																		$teamTwo = App\Models\Team::select('id','name','team_logo')->find($fix->teamTwo_id); 
+																		$teamTwo = App\Models\Team::select('id','name','team_logo')->find($fix->teamTwo_id);
 																	?>
 																	<div class="row mb-2">
 																		<div class="col-3 FlotingLabelUp pr-0 pr-0 ">
@@ -1716,9 +1716,9 @@ $centerIndex = null;
 														@if($fixtures->count() > 0)
 															<div class="Scrollbar-card">
 																@foreach($fixtures as $fix)
-																	<?php 
+																	<?php
 																		$teamOne = App\Models\Team::select('id','name','team_logo')->find($fix->teamOne_id);
-																		$teamTwo = App\Models\Team::select('id','name','team_logo')->find($fix->teamTwo_id); 
+																		$teamTwo = App\Models\Team::select('id','name','team_logo')->find($fix->teamTwo_id);
 																	?>
 																	<div class="row mb-2">
 																		<div class="col-3 FlotingLabelUp pr-0 pr-0 ">
@@ -1905,9 +1905,9 @@ $centerIndex = null;
 														@if($fixtures->count() > 0)
 															<div class="Scrollbar-card">
 																@foreach($fixtures as $fix)
-																	<?php 
+																	<?php
 																		$teamOne = App\Models\Team::select('id','name','team_logo')->find($fix->teamOne_id);
-																		$teamTwo = App\Models\Team::select('id','name','team_logo')->find($fix->teamTwo_id); 
+																		$teamTwo = App\Models\Team::select('id','name','team_logo')->find($fix->teamTwo_id);
 																	?>
 																	<div class="row mb-2">
 																		<div class="col-3 FlotingLabelUp pr-0 pr-0 ">
@@ -3144,7 +3144,7 @@ $(document).on('click','#close_contact_us',function(){
 			$('#comp_email_error').html("Enter valid email");
 		}
 	})
-	
+
 </script>
 <script>
 	function getFixtures(clas){
@@ -3333,7 +3333,7 @@ $(document).on('click','#close_contact_us',function(){
 			$(exist_opp_id+" option[value=" + team_id1 + "]").hide();
 			}
 		});
-		
+
 	}).change(function(){
 		set_opp_id = "#updateround"+round+"_"+position+"_"+fixture;
 		var team_id = $(set_opp_id).val();
@@ -3343,19 +3343,19 @@ $(document).on('click','#close_contact_us',function(){
 				opp_id = "#updateround"+round+"_"+v+"_"+fixture;
 				$(opp_id+" option[value=" + exist_val + "]").show();
 			});
-			
+
 			$("#edit_team_logo"+position+'_'+round+'_'+fixture).attr("src", '{{url("frontend/images/TeamMore-Add.png")}}');
 			// alert('change to empty value');
 		}else{
 			if(exist_val != "")
-			{	
+			{
 				const hide_position = ['TL','TR'];
 				$.each(hide_position, function( i1, v1) {
 					var opp_id1 = "#updateround"+round+"_"+v1+"_"+fixture;
 					$(opp_id1+" option[value=" + exist_val + "]").show();
 					$(opp_id1+" option[value=" + team_id + "]").hide();
 				});
-				
+
 				$("#edit_team_logo"+position+'_'+round+'_'+fixture).attr("src", '{{url("frontend/images/TeamMore-Add.png")}}');
 				// alert('change exist value');
 			}
@@ -3512,7 +3512,7 @@ $(document).on('click','#close_contact_us',function(){
 			{
 
 				$('#graph_data').html(response);
-				
+
 				//console.log(response);
 			}
 		});

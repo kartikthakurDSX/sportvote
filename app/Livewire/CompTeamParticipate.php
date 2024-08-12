@@ -125,85 +125,82 @@ class CompTeamParticipate extends Component
 		$competition = Competition::find($this->comp_id);
 		if($this->team_id)
 		{
-			$check_team_num = Competition_team_request::where('competition_id',$this->comp_id)->whereNotIn('request_status',[2,3])->count();
-			if($competition->team_number > $check_team_num)
-			{
-				for($i=0; $i< count($this->team_id); $i++)
-				{
-
-					$team = Team::find($this->team_id[$i]);
-					if($team->user_id == Auth::user()->id)
-					{
-						$request_status = 1;
-					}
-					else
-					{
-						$request_status = 0;
-					}
-					$check_team_request = Competition_team_request::where('competition_id',$this->comp_id)->where('team_id',$this->team_id[$i])->first();
-					$check_team_updated = Competition_team_request::where('competition_id',$this->comp_id)->WhereNotIn('request_status',[2,3])->count();
-					if($competition->team_number > $check_team_updated)
-					{
-						if(!empty($check_team_request))
-						{
-							$comp_team_request = Competition_team_request::find($check_team_request->id);
-							$comp_team_request->request_status = $request_status;
-							$comp_team_request->save();
-							if($team->user_id != Auth::user()->id)
-							{
-								$notification = Notification::create([
-									'notify_module_id' => 3,
-									'type_id' => $comp_team_request->id,
-									'sender_id' => Auth::user()->id,
-									'reciver_id' =>  $team->user_id,
-									'is_active' => 1,
-								]);
-							}
-						}
-						else
-						{
-							$comp_team_request = new Competition_team_request();
-							$comp_team_request->competition_id = $this->comp_id;
-							$comp_team_request->team_id = $this->team_id[$i];
-							$comp_team_request->user_id = $team->user_id;
-							$comp_team_request->save();
-
-							if($team->user_id != Auth::user()->id)
-							{
-								$notification = Notification::create([
-									'notify_module_id' => 3,
-									'type_id' => $comp_team_request->id,
-									'sender_id' => Auth::user()->id,
-									'reciver_id' =>  $team->user_id,
-									'is_active' => 1,
-								]);
-							}
-						}
-					}
-					else
-					{
-						 return redirect(route('competition.show', $this->comp_id));
-					}
-				}
-				$this->open_addteam = false;
-
-			}
-			else
-			{
+            $check_team_num = Competition_team_request::where('competition_id',$this->comp_id)->whereNotIn('request_status',[2,3])->count();
+            // dd(var_dump($competition->team_number));
+			if($competition->team_number < $check_team_num){
+                dd($competition->team_number > $check_team_num);
 				$this->dispatch('swal:modal', [
 
 					'message' => $competition->team_number.' teams required',
 
 				]);
 			}
+			else{
+                for($i=0; $i< count($this->team_id); $i++)
+                {
+
+                    $team = Team::find($this->team_id[$i]);
+                    if($team->user_id == Auth::user()->id)
+                    {
+                        $request_status = 1;
+                    }
+                    else
+                    {
+                        $request_status = 0;
+                    }
+                    $check_team_request = Competition_team_request::where('competition_id',$this->comp_id)->where('team_id',$this->team_id[$i])->first();
+                    $check_team_updated = Competition_team_request::where('competition_id',$this->comp_id)->WhereNotIn('request_status',[2,3])->count();
+                    if($competition->team_number > $check_team_updated)
+                    {
+                        if(!empty($check_team_request))
+                        {
+                            $comp_team_request = Competition_team_request::find($check_team_request->id);
+                            $comp_team_request->request_status = $request_status;
+                            $comp_team_request->save();
+                            if($team->user_id != Auth::user()->id)
+                            {
+                                $notification = Notification::create([
+                                    'notify_module_id' => 3,
+                                    'type_id' => $comp_team_request->id,
+                                    'sender_id' => Auth::user()->id,
+                                    'reciver_id' =>  $team->user_id,
+                                    'is_active' => 1,
+                                ]);
+                            }
+                        }
+                        else
+                        {
+                            $comp_team_request = new Competition_team_request();
+                            $comp_team_request->competition_id = $this->comp_id;
+                            $comp_team_request->team_id = $this->team_id[$i];
+                            $comp_team_request->user_id = $team->user_id;
+                            $comp_team_request->save();
+                            // dd($comp_team_request);
+
+                            if($team->user_id != Auth::user()->id)
+                            {
+                                $notification = Notification::create([
+                                    'notify_module_id' => 3,
+                                    'type_id' => $comp_team_request->id,
+                                    'sender_id' => Auth::user()->id,
+                                    'reciver_id' =>  $team->user_id,
+                                    'is_active' => 1,
+                                ]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                         return redirect(route('competition.show', $this->comp_id));
+                    }
+                }
+                $this->open_addteam = false;
+                // dd($competition->team_number > $check_team_num);
+			}
 		}
 		else
 		{
-			$this->dispatch('swal:modal', [
-
-				'message' => 'select team',
-
-			]);
+			$this->dispatch('swal:modal', ['message' => 'select team']);
 		}
 
 

@@ -18,7 +18,7 @@
     }
 </style>
 <div class="header-bottom">
-    <button id="triggerAll" class="RefreshButtonTop btn btn-btn" wire:click="$refresh">
+    <button id="triggerAll" class="RefreshButtonTop btn btn-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
             <path
                 d="M15.8591 9.625H21.2662C21.5577 9.625 21.7169 9.96492 21.5303 10.1888L18.8267 13.4331C18.6893 13.598 18.436 13.598 18.2986 13.4331L15.595 10.1888C15.4084 9.96492 15.5676 9.625 15.8591 9.625Z"
@@ -31,6 +31,7 @@
                 fill="white" />
         </svg>
     </button>
+    {{-- <button wire:click="refresh">Refresh</button> --}}
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -1550,16 +1551,16 @@
 <script>
     window.addEventListener('swal:modal', event => {
         swal({
-            title: event.detail.message,
-            text: event.detail.text,
+            title: event.detail[0].message,
+            text: event.detail.message,
             icon: event.detail.type,
         });
     });
 
     window.addEventListener('swal:confirm', event => {
         swal({
-                title: event.detail.message,
-                text: event.detail.text,
+                title: event.detail[0].message,
+                text: event.detail.message,
                 icon: event.detail.type,
                 buttons: true,
                 dangerMode: true,
@@ -2080,6 +2081,15 @@
     $('.teamTwoDatetime').click(function() {
         var teamTwostattime = $(this).attr('data-time');
         $('#stattimeTeamtwo').val(teamTwostattime);
+    });
+
+    // $('#triggerAll').on('click',function(){
+    //     $('.processed').trigger('click');
+    // });
+</script>
+<script>
+    $('#triggerAll').on('click', function() {
+        $('.processed').trigger('click');
     });
 </script>
 <script>

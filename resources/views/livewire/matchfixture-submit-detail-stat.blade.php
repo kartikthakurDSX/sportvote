@@ -419,15 +419,15 @@
     <script>
         window.addEventListener('swal:modal', event => {
             swal({
-                title: event.detail.message,
-                text: event.detail.text,
+                title: event.detail.title,
+                text: event.detail[0].message,
                 icon: event.detail.type,
             });
         });
         window.addEventListener('swal:confirm', event => {
             swal({
-                title: event.detail.message,
-                text: event.detail.text,
+                title: event.detail.title,
+                text: event.detail[0].message,
                 icon: event.detail.type,
                 buttons: true,
                 dangerMode: true,

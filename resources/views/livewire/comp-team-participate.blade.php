@@ -45,7 +45,7 @@
 				<div class="row paddngSpcng">
 					<div class="col-12 mb-4">
 						<div class="row mb-3 SendInvitationTeam" >
-							<select id="category-dropdown" class="form-control" multiple  wire:model="team_id">
+							<select id="category-dropdown" class="form-control" multiple wire:model="team_id">
 								@foreach($teams as $keyt => $team)
 									<option wire:key="t-{{$keyt}}" value="{{$team->id}}">{{$team->name}}</option>
 								@endforeach
@@ -121,23 +121,23 @@
 	<script>
 		window.addEventListener('swal:modal', event => {
 			swal({
-			title: event.detail.message,
-			text: event.detail.text,
+			title: event.detail[0].message,
+			text: event.detail.message,
 			icon: event.detail.type,
 			});
 		});
 
 		window.addEventListener('swal:confirm', event => {
 			swal({
-			title: event.detail.message,
-			text: event.detail.text,
+			title: event.detail[0].message,
+			text: event.detail.message,
 			icon: event.detail.type,
 			buttons: true,
 			dangerMode: true,
 			})
 			.then((willDelete) => {
 			if (willDelete) {
-				window.livewire.emit('remove');
+				window.livewire.dispatch('remove');
 			}
 			});
 		});

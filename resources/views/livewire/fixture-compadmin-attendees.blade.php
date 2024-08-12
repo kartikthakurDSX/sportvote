@@ -7,8 +7,7 @@
               @foreach ($teamOne_attendees as $tm1)
                   <?php $team_member = App\Models\Team_member::select('jersey_number')->where('member_id', $tm1->attendee_id)
                       ->where('team_id', $teamOne->id)
-                      ->first();
-                      ?>
+                      ->first(); ?>
                   <div class="player-jersy-list">
                       <div class="jersy-img-wrap mb-2">
                           <style>
@@ -21,7 +20,7 @@
                               }
                           </style>
                           <span class="jersy-no team-jersy-left jersy1">
-                              @if ($team_member)
+                              @if ($team_member->jersey_number)
                                   {{ $team_member->jersey_number }}
                               @else
                               @endif
@@ -348,7 +347,7 @@
           <div class="player-jersy-list" data-bs-target="#plyrRecord" data-bs-toggle="modal">
               <div class="jersy-img-wrap mb-2">
                   <span class="jersy-no team-jersy-right jersy2">
-                      @if ($team_member)
+                      @if ($team_member->jersey_number)
                           {{ $team_member->jersey_number }}
                       @else
                       @endif
@@ -636,17 +635,18 @@
   <script type="text/javascript" src="{{url('frontend/js/dist_sweetalert.min.js')}}"></script>
   <script>
       window.addEventListener('swal:modal', event => {
+          console.log(event.detail[0].message);
           swal({
-              title: event.detail.message,
-              text: event.detail.text,
+              title: event.detail[0].message,
+              text: event.detail.message,
               icon: event.detail.type,
           });
       });
 
       window.addEventListener('swal:confirm', event => {
           swal({
-                  title: event.detail.message,
-                  text: event.detail.text,
+                  title: event.detail[0].message,
+                  text: event.detail.message,
                   icon: event.detail.type,
                   buttons: true,
                   dangerMode: true,

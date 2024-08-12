@@ -135,29 +135,17 @@ class LeagueCreateFixture extends Component
                         $notification->save();
 
                     }
-                    $this->dispatch('swal:modal', [
-
-                        'message' => 'Competition Start!!',
-
-                    ]);
+                    $this->dispatch('swal:modal', ['message' => 'Competition Start!!']);
                     return redirect(route('competition.show', $this->comp_id));
-            }
-            else
-            {
-                $this->dispatch('swal:modal', [
-
-                    'message' => 'Create All Rounds Fixtures',
-
-                ]);
+                }
+                else
+                {
+                $this->dispatch('swal:modal', ['message' => 'Create All Rounds Fixtures']);
             }
         }
         else
         {
-            $this->dispatch('swal:modal', [
-
-                'message' => 'Referee is not ready for this competition',
-
-            ]);
+            $this->dispatch('swal:modal', ['message' => 'Referee is not ready for this competition']);
         }
     }
     public function all_ics_file()

@@ -13,7 +13,6 @@ class CompCreateAdmin extends Component
 	}
     public function render()
     {
-		dd($this->id);
 		$competition_member = Comp_member::where('comp_id',$this->comp_id)->with('member','member_position')->get();
         return view('livewire.competition.comp-create-admin',compact('competition_member'));
     }

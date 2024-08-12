@@ -37,17 +37,18 @@
     <script>
 
     window.addEventListener('swal:modal', event => {
+        console.log('swal:modal event detail:', event.detail[0].message);
         swal({
-        title: event.detail.message,
-        text: event.detail.text,
+        title: event.detail[0].message,
+        text: event.detail.message,
         icon: event.detail.type,
         });
     });
 
     window.addEventListener('swal:confirm', event => {
         swal({
-        title: event.detail.message,
-        text: event.detail.text,
+        title: event.detail[0].message,
+        text: event.detail.message,
         icon: event.detail.type,
         buttons: true,
         dangerMode: true,

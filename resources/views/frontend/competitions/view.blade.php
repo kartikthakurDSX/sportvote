@@ -61,7 +61,8 @@
                                 @elseif($competition->report_type == 2)
                                     Detailed
                                 @endif
-                            </span></p>
+                            </span>
+                        </p>
                     </div>
                 </div>
                 <div class="p-0 col-md-2 seventyNine">

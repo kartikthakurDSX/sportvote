@@ -552,6 +552,9 @@
                                     </div>
                                     <div class="modal-body"><br>
                                         <div class="container">
+                                            @error('sponsor_name')
+                                                {{ $message }}
+                                            @enderror
                                             <div class="row">
                                                 <div class="mb-4 col-md-12 FlotingLabelUp">
                                                     <div class="floating-form ">
@@ -1071,3 +1074,4 @@
 
         </div>
     </div>
+</div>

@@ -105,6 +105,7 @@ class FixtureVoteAttendees extends Component
             $convert_voting_timeTo_sec = $match_fixtureVoting_time * 60;
             $strtotime_match_fixture_finishdate_time = strtotime($match_fixture_finishdate_time) + $convert_voting_timeTo_sec;
             $current_time = strtotime(now());
+            // dd($current_time, $strtotime_match_fixture_finishdate_time);
             if ($current_time >= $strtotime_match_fixture_finishdate_time) {
                 if (!(empty($manoftheMatch_player_id))) {
                     $mvp_player_id = $manoftheMatch['player_id'];
@@ -124,7 +125,7 @@ class FixtureVoteAttendees extends Component
 
                 $playerofthematch = $manoftheMatch;
             } else {
-
+                // dd("hello");
                 $playerofthematch = '';
             }
         } else {
@@ -155,19 +156,16 @@ class FixtureVoteAttendees extends Component
             ->whereNotIn('attendee_id', $query2)
             ->with('player')->get();
 
-
-        if (Auth::check()) {
-            $voting = Voting::where('match_fixture_id', $this->fixture_id)->where('fan_id', Auth::user()->id)->first();
-            return view('livewire.fixture-vote-attendees', compact('fixture_lapse_type', 'voting', 'ground_map_position', 'voting_minutes', 'manoftheMatch', 'scorerofthematch', 'player_stats', 'match_fixture', 'fixture_squad_teamOne', 'fixture_squad_teamTwo', 'competition', 'teamOne', 'teamTwo', 'teamOne_attendees', 'teamTwo_attendees', 'player_goal', 'playerofthematch', 'subplyr1', 'subplyr2'));
-        } else {
+            if (Auth::check()) {
+                $voting = Voting::where('match_fixture_id', $this->fixture_id)->where('fan_id', Auth::user()->id)->first();
+                return view('livewire.fixture-vote-attendees', compact('fixture_lapse_type', 'voting', 'ground_map_position', 'voting_minutes', 'manoftheMatch', 'scorerofthematch', 'player_stats', 'match_fixture', 'fixture_squad_teamOne', 'fixture_squad_teamTwo', 'competition', 'teamOne', 'teamTwo', 'teamOne_attendees', 'teamTwo_attendees', 'player_goal', 'playerofthematch', 'subplyr1', 'subplyr2'));
+            } else {
             return view('livewire.fixture-vote-attendees', compact('fixture_lapse_type', 'ground_map_position', 'voting_minutes', 'manoftheMatch', 'scorerofthematch', 'player_stats', 'match_fixture', 'fixture_squad_teamOne', 'fixture_squad_teamTwo', 'competition', 'teamOne', 'teamTwo', 'teamOne_attendees', 'teamTwo_attendees', 'player_goal', 'playerofthematch'));
         }
     }
 
-    public function vote($id, $team_id)
-    {
+    public function hello($id, $team_id){
         $check_vote = Voting::where('match_fixture_id', $this->fixture_id)->where('fan_id', Auth::user()->id)->first();
-
         if ($check_vote) {
             $voting = Voting::find($check_vote->id);
             $voting->team_id = $team_id;
@@ -182,10 +180,6 @@ class FixtureVoteAttendees extends Component
             $voting->save();
         }
 
-        $this->dispatch('swal:modal', [
-            'message' => 'Your vote submitted successfully',
-        ]);
+        $this->dispatch('swal:modal', ['message' => 'Your vote submitted successfully']);
     }
-
-
 }

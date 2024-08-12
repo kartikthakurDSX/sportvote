@@ -19,7 +19,7 @@
 		  	</div>
 	   	</div>
 	</div>
-</div>	
+</div>
 </div>
 <main id="main" class="dashboard-wrap Team-Public-Profil Competitionn-Page Competitionn-Page-Additional  KoAdminView League-page">
     <div class="container-fluid bg-GraySquad">
@@ -40,7 +40,7 @@
                 <div class="col-md-2 p-0">
                     <div class="ForeginPlayer">
                         <span class="SquadCS">MATCHES PLAYED</span>
-                        <?php $total_matches = $total_rounds * $round_fixtures; 
+                        <?php $total_matches = $total_rounds * $round_fixtures;
                         $completed_fixture = App\Models\Match_fixture::where('competition_id',$competition->id)->where('finishdate_time','!=',null)->count();?>
                         <p class="fitIn"><span class="FiveFtComp">{{$completed_fixture}}</span><span class="SlePer">/{{$total_matches}}</span></p>
                     </div>
@@ -100,7 +100,7 @@
                                                     </select>
                                                 </div>
                                                 <span id="display_top_teams">
-                                                <?php $teamids = array(); 
+                                                <?php $teamids = array();
                                                     $team_goals = App\Models\Match_fixture_stat::where('competition_id',$competition->id)->where('sport_stats_id',$team_stat[0]['id'])->get();
                                                     $top_team_goal = $team_goals->groupBy('team_id');
                                                 ?>
@@ -108,11 +108,11 @@
                                                     @foreach($top_team_goal  as $top_team => $stat)
                                                         <?php  $teamids[$top_team] = $stat->count(); ?>
                                                     @endforeach
-                                                <?php 
+                                                <?php
                                                     arsort($teamids);
                                                     $team_stat_count_key = array_keys($teamids);
                                                     for($tp = 0; $tp<count($team_stat_count_key); $tp++)
-                                                    {  
+                                                    {
                                                         if($tp < 5)
                                                         {
                                                             $teamid = $team_stat_count_key[$tp];
@@ -133,11 +133,11 @@
                                                             <span class="badge">{{$teamgoal}}</span>
                                                             </li> </a>
                                                             <?php
-                                                        } 
+                                                        }
                                                     }?>
                                                     <div class="list-group-item  justify-content-between align-items-start">
                                                         <div class=" EngCity">
-                                                            <div class=" AndyMcg text-decoration">  
+                                                            <div class=" AndyMcg text-decoration">
                                                             <a class="text-decoration AndyMcg"  id="view_top_teams" style="cursor:pointer;"> View Full Rankings Table <i class="fa-solid fa-angles-right"></i> </a>
                                                             </div>
                                                             <!-- <a class="text-decoration AndyMcg" href="" id="view_top_teams"> View Full Rankings Table <i class="fa-solid fa-angles-right"></i> </a> -->
@@ -172,11 +172,11 @@
 													@foreach($top_player_goal  as $top_player => $stat)
 														<?php  $playerids[$top_player] = $stat->count(); ?>
 													@endforeach
-													<?php 
-													arsort($playerids);	
+													<?php
+													arsort($playerids);
                                                     $stat_count_key = array_keys($playerids);
                                                     for($tp = 0; $tp<count($stat_count_key); $tp++)
-                                                    { 
+                                                    {
                                                         if($tp < 5)
                                                         {
                                                             $playerid = $stat_count_key[$tp];
@@ -198,28 +198,28 @@
                                                                 <div class="ms-2 me-auto EngCity">
                                                                     <a href="{{ URL::to('player_profile/' . $playerid) }}" target="_blank">
                                                                         <div class=" ManCity"  >
-                                                                            {{$player->first_name}} {{$player->last_name}} 
+                                                                            {{$player->first_name}} {{$player->last_name}}
                                                                         </div>
                                                                     </a>
                                                                     <a href="{{ URL::to('team/' . $player_team->id) }}" target="_blank"> @php echo str::of($player_team->name)->limit(13); @endphp </a>
                                                                 </div>
                                                                 <span class="badge">{{$playergoal}}</span>
                                                             </li>
-                                                        <?php 
+                                                        <?php
                                                         }
                                                     } ?>
                                                     <div class="list-group-item  justify-content-between align-items-start">
                                                         <div class=" EngCity">
-                                                            <div class=" AndyMcg text-decoration"> 
+                                                            <div class=" AndyMcg text-decoration">
                                                                 <a class="text-decoration AndyMcg" id="view_top_players" style="cursor:pointer;"> View Full Rankings Table <i class="fa-solid fa-angles-right"></i> </a>
                                                                 </div>
                                                         </div>
-                                                    </div>	
+                                                    </div>
                                                 @else
                                                     <div class="list-group-item d-flex justify-content-between align-items-start">
                                                         <p style="text-align:center; font-weight:bold;">No Data Found</p>
                                                     </div>
-                                                @endif	
+                                                @endif
 						                    </span>
                                         </ol>
                                     </div>
@@ -240,11 +240,11 @@
                                                     @foreach($recent_winner as $mvp)
                                                         <?php $mvp_winner[$mvp['player_id']] = $mvp['total']; ?>
                                                     @endforeach
-                                                    <?php 
-                                                    arsort($mvp_winner);	
+                                                    <?php
+                                                    arsort($mvp_winner);
                                                     $vote_count_key = array_keys($mvp_winner);
                                                     for($tp = 0; $tp<count($vote_count_key); $tp++)
-                                                    { 
+                                                    {
                                                         if($tp < 5)
                                                         {
                                                             $mvpplayerid = $vote_count_key[$tp];
@@ -267,19 +267,19 @@
                                                                 <div class="ms-2 me-auto EngCity">
                                                                     <a href="{{ URL::to('player_profile/' . $mvpplayerid) }}" target="_blank">
                                                                         <div class=" ManCity"  >
-                                                                            {{$mvpplayer->first_name}} {{$mvpplayer->last_name}} 
+                                                                            {{$mvpplayer->first_name}} {{$mvpplayer->last_name}}
                                                                         </div>
                                                                     </a>
                                                                     <a href="{{ URL::to('team/' . $mvpplayer_team->id) }}" target="_blank"> @php echo str::of($mvpplayer_team->name)->limit(13); @endphp </a>
                                                                 </div>
                                                                 <span class="badge">{{$playervote}}</span>
                                                             </li>
-		        									    <?php 
+		        									    <?php
 		        								        }
                                                     } ?>
                                                     <div class="list-group-item  justify-content-between align-items-start">
                                                         <div class=" EngCity">
-                                                            <div class=" AndyMcg text-decoration"> 
+                                                            <div class=" AndyMcg text-decoration">
                                                                 <a class="text-decoration AndyMcg" id="view_all_winners" style="cursor:pointer;"> View Full Rankings Table <i class="fa-solid fa-angles-right"></i> </a>
                                                         </div>
                                                     </div>
@@ -304,10 +304,10 @@
                         <ul class="nav nav-tabs">
                             <div class="owl_fixtureLeague owl-carousel owl-theme">
                                 @foreach($month_array as $month)
-                                    <?php 
+                                    <?php
                                     $i = 1;
-                                    $current_month = date('M'); 
-                                    
+                                    $current_month = date('M');
+
                                     if(strtoupper($current_month) == $month)
                                     {
                                         $class = "active";
@@ -333,9 +333,9 @@
                         </ul>
                         <div class="tab-content">
                             @foreach($month_array as $month)
-                                <?php 
+                                <?php
                                     $i = 1;
-                                    $current_month = date('M'); 
+                                    $current_month = date('M');
                                     if(strtoupper($current_month) == $month)
                                     {
                                     $class = "active";
@@ -350,7 +350,7 @@
                                     }
                                 ?>
                                 <div id="{{$link}}" class="{{$div_class}}">
-                                    <?php 
+                                    <?php
                                     $check_month = array_search ($month, $month_array);
                                     $get_month = $check_month + 1;
                                     $tab_month = str_pad($get_month,2,'0',STR_PAD_LEFT);
@@ -395,13 +395,13 @@
                                                                     <a title="Competition not start yet!" class="btn btn-gray text-center btn-xs-nb comp_start0"  target="_blank" data-toggle="tooltip" data-placement="bottom" title="Competition Name: {{$fixture->competition->name}}, Competition type: {{$Comp_type->name}}, TeamOne: {{$fixture->teamOne->name}}, TeamTwo: {{$fixture->teamTwo->name}}">{{ date('H:i', strtotime($fixture->fixture_date)) }}</a>
                                                                 @endif
                                                             @else
-                                                                <?php 
+                                                                <?php
                                                                 $teamOneGoal = App\Models\Match_fixture_stat::where('match_fixture_id',$fixture->id)->where('team_id',$fixture->teamOne_id)->where('sport_stats_id',1)->count();
                                                                 $teamTwoGoal = App\Models\Match_fixture_stat::where('match_fixture_id',$fixture->id)->where('team_id',$fixture->teamTwo_id)->where('sport_stats_id',1)->count();
-																
+
                                                                 ?>
                                                                 <a href="{{ URL::TO('match-fixture/' . $fixture->id)}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Competition Name: {{$fixture->competition->name}}, Competition type: {{$Comp_type->name}}, TeamOne: {{$fixture->teamOne->name}}, TeamTwo: {{$fixture->teamTwo->name}}">
-																	<span class=" btn-greenFXL " target="_blank">{{$teamOneGoal}}</span> 
+																	<span class=" btn-greenFXL " target="_blank">{{$teamOneGoal}}</span>
 																	<span class=" btn-greenFXR ">{{$teamTwoGoal}}</span>
 																</a>
                                                             @endif
@@ -410,7 +410,7 @@
                                                                 <div class="pp-pageHW"><a href="{{ URL::TO('team/' . $fixture->teamTwo_id)}}" target="_blank"> <img class="img-fluid " src="{{url('frontend/logo')}}/{{$fixture->teamTwo->team_logo}}"></a></div>&nbsp;
                                                                 <a href="{{ URL::TO('team/' . $fixture->teamTwo_id)}}" target="_blank"> <b class="WolVerWand">@php echo Str::of($fixture->teamTwo->name)->limit(12); @endphp</b></a>
                                                             </td>
-                                                            
+
                                                                 @livewire('competition.leauge-ics-file',['fixture_id' => $fixture->id])
                                                         </tr>
                                                         @endforeach
@@ -539,7 +539,7 @@
 		                                              	 <?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 		                                            </div>
 		                                            <div class="donut__label__sub">
-		                                              PLAYED 
+		                                              PLAYED
 		                                            </div>
 	                              				</div>
 	                            			</div>
@@ -559,7 +559,7 @@
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -579,7 +579,7 @@
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -615,7 +615,7 @@
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div> <?php
@@ -649,7 +649,7 @@
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -684,7 +684,7 @@
 															<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 														</div>
 														<div class="donut__label__sub">
-														PLAYED 
+														PLAYED
 														</div>
 													</div>
 												</div>
@@ -725,7 +725,7 @@
 														<?php echo str_pad(count($firstL_played), 2, 0,STR_PAD_LEFT);  ?>
 													</div>
 													<div class="donut__label__sub">
-													PLAYED 
+													PLAYED
 													</div>
 												</div>
 											</div> <?php
@@ -857,7 +857,7 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
@@ -877,7 +877,7 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div> <?php
@@ -896,7 +896,7 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
@@ -932,7 +932,7 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div> <?php
@@ -966,7 +966,7 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
@@ -1000,11 +1000,11 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
 				                            			</div>
-				                                    <?php 
+				                                    <?php
 													}elseif($firstR_won != 0 && $firstR_draw != 0 && $firstR_lost != 0)
 													{
 														$Rmultiplyer = (int)(100/count($firstR_played));
@@ -1041,10 +1041,10 @@
 					                                              	 <?php echo str_pad(count($firstR_played), 2, 0,STR_PAD_LEFT);  ?>
 					                                            </div>
 					                                            <div class="donut__label__sub">
-					                                              PLAYED 
+					                                              PLAYED
 					                                            </div>
 				                              				</div>
-				                            			</div> 
+				                            			</div>
 													<?php
 														}
 													?>
@@ -1054,7 +1054,7 @@
                                 				<div class=" borderPoint">
                                    					<div class="d-flex ">
 				                                        <div class="box-grenn">
-				                                            
+
 				                                        </div>
 				                                        <div class="cards-det">
 				                                            <span class="Box-grenn-txt"><?php echo str_pad($firstR_won, 2, 0,STR_PAD_LEFT);  ?> WON</span>
@@ -1062,7 +1062,7 @@
                                     				</div>
 				                                    <div class="d-flex ">
 				                                        <div class="box-gray">
-				                                            
+
 				                                        </div>
 				                                        <div class="cards-det">
 				                                            <span class="Box-grenn-txt"><?php echo str_pad($firstR_draw, 2, 0,STR_PAD_LEFT);  ?> DRAW</span>
@@ -1079,7 +1079,7 @@
 				                                    <p class="line-height-Team-form">
 				                                        <?php
 														$rtf = 0;
-														foreach($firstR_played as $a_team){ $rtf++; 
+														foreach($firstR_played as $a_team){ $rtf++;
 														if($rtf < 5){
 														?>
 															@if($a_team->winner_team_id == $first_fixtures->teamTwo->id)
@@ -1090,7 +1090,7 @@
 																<span class="R-Tean-form"> L</span>
 															@endif
 														<?php } else{ } } ?>
-														<?php 
+														<?php
 														$restofteamform = 5 - $firstR_played->count();
 														for($r = 1; $r<=$restofteamform; $r++){ ?>
 															<span class="R-Tean-form" style="background-color:#003b5f !important;"> N/A</span>
@@ -1112,7 +1112,7 @@
 	                            		</div>
 	                        		</div>
 	                    		</div>
-	               			 </div> 
+	               			 </div>
 	               		</div>
                    @else
                    @endif
@@ -1159,9 +1159,9 @@
                             <hr>
                             @livewire('competition.addcomp-youtube-video', ['competition'=> $competition->id])
 							@livewireScripts
-                            
-                            
-                            
+
+
+
                         </div>
                     </div>
                 </div>
@@ -1191,7 +1191,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="view_full_top_team">
-			
+
       </div>
       <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -1208,7 +1208,7 @@
 
 
         @include('frontend.includes.footer')
- 
+
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -1251,7 +1251,7 @@
                 }
                 $('#counter').html("item " + item + " of " + items)
             }
-        }); 
+        });
     </script>
 
 
@@ -1317,7 +1317,7 @@
             }
         })
     </script>
-    
+
 
     <script type="text/javascript">
         $(' .owl_fixtureLeague').owlCarousel({
@@ -1460,7 +1460,7 @@ $(document).on('change','#change_team_stat',function(){
 		data:{sport_id:sport_id,comp_id:comp_id},
 		success:function(response)
 		{
-			
+
 			if(response.data == 0)
 			{
 				html = '<div class="list-group-item d-flex justify-content-between align-items-start"><p style="text-align:center; font-weight:bold;">No Data Found</p></div>';
@@ -1472,7 +1472,7 @@ $(document).on('change','#change_team_stat',function(){
 				$.each(response.top_teams_data, function(index, value)
 				{
 					html += value;
-					
+
 				});
 				html += '<div class="list-group-item  justify-content-between align-items-start"> <div class=" EngCity"><div class=" AndyMcg text-decoration"> <a class="text-decoration AndyMcg" id="view_top_teams" style="cursor:pointer;"> View Full Rankings Table <i class="fa-solid fa-angles-right"></i> </a></div></div></div>	';
 				$('#display_top_teams').html(html);
@@ -1482,7 +1482,7 @@ $(document).on('change','#change_team_stat',function(){
 		error:function(){
 			alert('something went wrong');
 		}
-		
+
 	});
 })
 </script>
@@ -1500,7 +1500,7 @@ $(document).on('change','#change_player_stat',function(){
 		data:{sport_id:sport_id,comp_id:comp_id},
 		success:function(response)
 		{
-			
+
 			if(response.data == 0)
 			{
 				html = '<div class="list-group-item d-flex justify-content-between align-items-start"><p style="text-align:center; font-weight:bold;">No Data Found</p></div>';
@@ -1512,7 +1512,7 @@ $(document).on('change','#change_player_stat',function(){
 				$.each(response.top_players_data, function(index, value)
 				{
 					html += value;
-					
+
 				});
 					html += '<div class="list-group-item  justify-content-between align-items-start"> <div class=" EngCity"><div class=" AndyMcg text-decoration"> <a class="text-decoration AndyMcg" id="view_top_players" style="cursor:pointer;"> View Full Rankings Table <i class="fa-solid fa-angles-right"></i> </a></div></div></div>	';
 				$('#display_top_players').html(html);
@@ -1522,7 +1522,7 @@ $(document).on('change','#change_player_stat',function(){
 		error:function(){
 			alert('something went wrong');
 		}
-		
+
 	});
 })
 </script>
@@ -1547,10 +1547,10 @@ $(document).on('change','#change_player_stat',function(){
 		error:function(){
 			alert('something went wrong');
 		}
-		
+
 	});
-	
-}) 
+
+})
 </script>
 <script>
 $(document).on('click','#view_top_teams',function(){
@@ -1573,9 +1573,9 @@ $(document).on('click','#view_top_teams',function(){
 		error:function(){
 			alert('something went wrong');
 		}
-		
+
 	});
-	
+
 })
 </script>
 <script>
@@ -1596,14 +1596,14 @@ $(document).on('click','#view_top_teams',function(){
 			},
 			success:function(response)
 			{
-				
+
 				$('#graph_data').html(response);
-				
+
 				//console.log(response);
 			}
 		});
 	})
-</script>   
+</script>
 <script>
 	$(document).on('change','.Quick_teamchange1',function(){
 		var opp_team = $(this).val();
@@ -1622,15 +1622,15 @@ $(document).on('click','#view_top_teams',function(){
 			},
 			success:function(response)
 			{
-				
+
 				$('#graph_data').html(response);
-				
+
 				//console.log(response);
 			}
 		});
 
 	})
-</script>   
+</script>
 <script>
 	$(document).on('change','#left_team_id',function(){
 		var team_id = $(this).val();
@@ -1646,7 +1646,7 @@ $(document).on('click','#view_top_teams',function(){
 				alert('something went wrong');
 			},
 			success:function(response)
-			{				
+			{
 				//console.log(response);
       			$("#left_team_logo").attr("src", '{{url("frontend/logo")}}/'+response.team_info.team_logo);
 				$('#left_team_bg').css('background-color',response.team_info.team_color);
@@ -1671,7 +1671,7 @@ $(document).on('click','#view_top_teams',function(){
 				alert('something went wrong');
 			},
 			success:function(response)
-			{				
+			{
 				//console.log(response);
       			$("#left_team_logo").attr("src", '{{url("frontend/logo")}}/'+response.team_info.team_logo);
       			$("#right_team_logo").attr("src", '{{url("frontend/logo")}}/'+response.opp_team.team_logo);
@@ -1696,12 +1696,12 @@ $(document).on('click','#view_top_teams',function(){
 				alert('something went wrong');
 			},
 			success:function(response)
-			{				
+			{
 				//console.log(response);
       			$('#mvp_winners').html(response);
 			}
 		});
-		
+
 	})
 </script>
 <script>

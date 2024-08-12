@@ -3124,40 +3124,41 @@ $teamTwo = App\Models\Team::select('id', 'name', 'team_logo')->find($fix->teamTw
                         }
                     });
                 }
-            } else {
-                if (team_id != '') {
-                    $(opp_id + " option[value=" + team_id + "]").hide();
-                    var team_pos = position;
-                    var selected_id = $(set_opp_id + " option:selected").val();
-                    console.log(set_opp_id, team_pos, 'selected id ', selected_id);
-                    $.ajax({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        url: '{{ url('temp_league_team') }}',
-                        type: 'post',
-                        data: {
-                            team_id: selected_id,
-                            logo_position: position,
-                            logo_fixture: fixture,
-                            logo_round: round
-                        },
-                        error: function() {
-                            alert('something went wrong');
-                        },
-                        success: function(responce) {
-                            var t_position = responce.t_position;
-                            var t_fixture = responce.t_fixture;
-                            var t_round = responce.t_round;
-                            var id = "#team_logo" + t_position + '_' + t_round + '_' +
-                                t_fixture;
-                            console.log('responce', id);
-                            $(id).attr("src", '{{ url('frontend/logo') }}/' + responce
-                                .teamlogo.team_logo);
-                        }
-                    });
-                }
             }
+            //  else {
+            //     if (team_id != '') {
+            //         $(opp_id + " option[value=" + team_id + "]").hide();
+            //         var team_pos = position;
+            //         var selected_id = $(set_opp_id + " option:selected").val();
+            //         console.log(set_opp_id, team_pos, 'selected id ', selected_id);
+            //         $.ajax({
+            //             headers: {
+            //                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //             },
+            //             url: '{{ url('temp_league_team') }}',
+            //             type: 'post',
+            //             data: {
+            //                 team_id: selected_id,
+            //                 logo_position: position,
+            //                 logo_fixture: fixture,
+            //                 logo_round: round
+            //             },
+            //             error: function() {
+            //                 alert('something went wrong');
+            //             },
+            //             success: function(responce) {
+            //                 var t_position = responce.t_position;
+            //                 var t_fixture = responce.t_fixture;
+            //                 var t_round = responce.t_round;
+            //                 var id = "#team_logo" + t_position + '_' + t_round + '_' +
+            //                     t_fixture;
+            //                 console.log('responce', id);
+            //                 $(id).attr("src", '{{ url('frontend/logo') }}/' + responce
+            //                     .teamlogo.team_logo);
+            //             }
+            //         });
+            //     }
+            // }
         });
     });
 </script>

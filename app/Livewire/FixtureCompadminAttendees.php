@@ -207,11 +207,7 @@ class FixtureCompadminAttendees extends Component
 
 	 public function alertstopmatch()
     {
-        $this->dispatch('swal:modal', [
-
-                'message' => 'You can not enter the players stats due to match is Stoped Or Paused',
-
-            ]);
+        $this->dispatch('swal:modal', ['message' => 'You can not enter the players stats due to match is Stoped Or Paused']);
     }
 	 public function alert_redcard_player()
     {
