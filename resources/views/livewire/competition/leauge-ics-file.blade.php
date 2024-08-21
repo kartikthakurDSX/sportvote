@@ -1,4 +1,4 @@
-<span class="row teamFixutreView"  wire:poll.visible.5s >
+<span class="row teamFixutreView"  wire:poll.5s >
     <button class="processed" wire:click="refresh">Refresh</button>
     <span class="col-md-2">
         @if($fixture->startdate_time == NULL)

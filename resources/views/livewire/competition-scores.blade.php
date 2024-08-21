@@ -11,7 +11,7 @@
         ->count();
 @endphp
 
-<div wire:poll.visible.3s>
+<div wire:poll.3s>
     <span class="btn-greenFXL">{{ $teamOneGoal }}</span>
     <span class="btn-greenFXR">{{ $teamTwoGoal }}</span>
 </div>

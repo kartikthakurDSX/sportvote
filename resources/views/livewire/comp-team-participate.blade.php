@@ -111,9 +111,6 @@
 					let data = $(this).val();
 						@this.set('team_id', data);
 				});
-				window.livewire.on('addteam', () => {
-					$('#category-dropdown').select2();
-				});
 			});
 		};
 	</script>

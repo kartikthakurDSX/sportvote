@@ -116,8 +116,6 @@ class CompTeamParticipate extends Component
 	{
 		$this->dispatch('addteam');
 		$this->open_addteam = true;
-
-		// $this->dispatch('openModaladdteam');
 	}
 	 public function send_invitation()
     {
@@ -200,7 +198,7 @@ class CompTeamParticipate extends Component
 		}
 		else
 		{
-			$this->dispatch('swal:modal', ['message' => 'select team']);
+			$this->dispatch('swal:modal', ['message' => 'Please select teams']);
 		}
 
 

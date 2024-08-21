@@ -23,7 +23,8 @@
 					@if($comp_sponsers->isNotEmpty())
 						@foreach ($comp_sponsers as $comp_sponser)
 							<?php
-								$sponserimage = $url . "/storage/app/public/image/" . $comp_sponser->sponsor_image;
+								// $sponserimage = $url . "/storage/app/public/image/" . $comp_sponser->sponsor_image;
+								$sponserimage = $url . asset('/storage') . "/image/".$comp_sponser->sponsor_image;
 							?>
 							<div class="slides"><img src="{{$sponserimage}}" class="img-fluidD" alt="" /></div>
 						@endforeach

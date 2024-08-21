@@ -4,7 +4,7 @@
     }
 </style>
 
-<div wire:poll.visible.5s>
+<div wire:poll.5s>
     <div class="owlTableMatchGoal matchPointTable owl-carousel owl-theme">
         @php
         function customSort($a, $b) {

@@ -51,4 +51,3 @@
             @include('frontend.includes.nav')
         @endauth
         {{-- @endif --}}
-        

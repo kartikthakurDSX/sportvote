@@ -3036,35 +3036,35 @@ $teamTwo = App\Models\Team::select('id', 'name', 'team_logo')->find($fix->teamTw
         const hide_position = ['TL', 'TR'];
         $.each(hide_position, function(index, value) {
             opp_id = "#round" + round + "_" + value + "_" + fixture;
-            // if (exist_val != '') {
-            //     $(opp_id + " option[value=" + exist_val + "]").show();
-            //     $("#team_logo" + position + '_' + round + '_' + fixture).attr("src",
-            //         '{{ url('frontend/images/TeamMore-Add.png') }}');
+            if (exist_val != '') {
+                $(opp_id + " option[value=" + exist_val + "]").show();
+                $("#team_logo" + position + '_' + round + '_' + fixture).attr("src",
+                    '{{ url('frontend/images/TeamMore-Add.png') }}');
 
-            //     if (team_id != '') {
-            //         $(opp_id + " option[value=" + team_id + "]").hide();
-            //         $.ajax({
-            //             headers: {
-            //                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            //             },
-            //             url: '{{ url('temp_league_team') }}',
-            //             type: 'post',
-            //             data: {
-            //                 team_id: team_id
-            //             },
-            //             error: function() {
-            //                 alert('something went wrong');
-            //             },
-            //             success: function(response) {
-            //                 //alert(response.teamlogo.team_logo);
-            //                 $("#team_logo" + position + '_' + round + '_' + fixture).attr(
-            //                     "src", '{{ url('frontend/logo') }}/' + response
-            //                     .teamlogo.team_logo);
-            //             }
-            //         });
-            //     }
+                if (team_id != '') {
+                    $(opp_id + " option[value=" + team_id + "]").hide();
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url: '{{ url('temp_league_team') }}',
+                        type: 'post',
+                        data: {
+                            team_id: team_id
+                        },
+                        error: function() {
+                            alert('something went wrong');
+                        },
+                        success: function(response) {
+                            //alert(response.teamlogo.team_logo);
+                            $("#team_logo" + position + '_' + round + '_' + fixture).attr(
+                                "src", '{{ url('frontend/logo') }}/' + response
+                                .teamlogo.team_logo);
+                        }
+                    });
+                }
 
-            // }
+            }
             if (exist_val != '') {
                 $(opp_id + " option[value=" + exist_val + "]").show();
                 $("#team_logo" + position + '_' + round + '_' + fixture).attr("src",
