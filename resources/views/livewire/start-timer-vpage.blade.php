@@ -79,8 +79,10 @@
     <!-- Clock -->
 
     <div class="myDIVTime">
+
         {{-- <button class="processed" wire:click="refresh">Refresh</button> --}}
         @if ($match_fixture->finishdate_time == null)
+
             @if ($timer_content_first_half == 'Start')
                 <!-- Start First Half Btn -->
                 @if (Auth::check())
@@ -147,7 +149,9 @@
                 </button>
                 <!-- End Start first Half Btn -->
             @else
+
                 @if ($timer_content_second_half)
+
                     @if ($timer_content_second_half == 'Start')
                         <!-- Start First Half Btn -->
                         @if (Auth::check())
@@ -239,11 +243,13 @@
                         @endif
                     @endif
                 @else
+                {{-- {{ dd($timer_content_first_half) }} --}}
                     <button class="StartTimebutton" title= "timer after start first half">
                         <div class="row">
                             <div class="col-md-3 m-auto"><img src="{{ url('frontend/images/Start-Icon.png') }}">
                             </div>
-                            <div class="col-md-6 p-1 m-auto">
+                            {{-- This is the timer --}}
+                            <div class="col-md-6 p-1 m-auto"> 
                                 <span class="StartHalf">{{ $timer_content_first_half }}</span>
                             </div>
                             <!-- <span class="StartHalf">{{ $first_half_timer }}</span></div> -->
@@ -723,5 +729,4 @@
             });
         }
     </script>
-</div>
 </div>

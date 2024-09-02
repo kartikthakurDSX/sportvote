@@ -3,24 +3,22 @@
 namespace App\Livewire;
 
 use App\Models\Comp_member;
-use Livewire\Component;
-use App\Models\Match_fixture;
 use App\Models\Competition;
-use App\Models\Team;
 use App\Models\Competition_attendee;
 use App\Models\Fixture_squad;
+use App\Models\Match_fixture;
+use App\Models\Match_fixture_lapse;
 use App\Models\Match_fixture_stat;
 use App\Models\Sport_stat;
-use App\Models\voting;
-use App\Models\User;
-use App\Models\Notification;
 use App\Models\SportGroundPosition;
-use App\Models\Match_fixture_lapse;
+use App\Models\Team;
+use App\Models\User;
+use App\Models\voting;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
 
-class FixtureCompadminAttendees extends Component
+class Attendees extends Component
 {
-
     public $match_fixture_id;
     public $fixture_id;
     public $player_id;
@@ -190,7 +188,7 @@ class FixtureCompadminAttendees extends Component
             ->whereNotIn('attendee_id', $query2)
             ->with('player')->get();
 
-        return view('livewire.fixture-compadmin-attendees', compact('fixture_lapse_type', 'voting', 'ground_map_position', 'voting_minutes', 'manoftheMatch', 'scorerofthematch', 'player_stats', 'match_fixture', 'fixture_squad_teamOne', 'fixture_squad_teamTwo', 'competition', 'teamOne', 'teamTwo', 'teamOne_attendees', 'teamTwo_attendees', 'player_goal', 'refrees', 'comp_referees', 'subplyr1', 'subplyr2'));
+        return view('livewire.attendees', compact('fixture_lapse_type', 'voting', 'ground_map_position', 'voting_minutes', 'manoftheMatch', 'scorerofthematch', 'player_stats', 'match_fixture', 'fixture_squad_teamOne', 'fixture_squad_teamTwo', 'competition', 'teamOne', 'teamTwo', 'teamOne_attendees', 'teamTwo_attendees', 'player_goal', 'refrees', 'comp_referees', 'subplyr1', 'subplyr2'));
     }
 
     public function vote($id, $team_id)
@@ -249,9 +247,5 @@ class FixtureCompadminAttendees extends Component
             $this->refree_id = $update_matchFixture->refree_id;
             $this->dispatch('closeSelectRefereeModal');
         }
-    }
-    public function test()
-    {
-        dd('test');
     }
 }

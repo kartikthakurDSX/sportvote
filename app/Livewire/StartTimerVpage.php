@@ -140,7 +140,7 @@ class StartTimerVpage extends Component
 				$count_pause_lapse_time = $get_pause_lapse_time->count();
 				//dd($count_pause_lapse_time);
 				if($count_pause_lapse_time == 1){
-					$start = $this->match_fixture->startdate_time;
+                    $start = $this->match_fixture->startdate_time;
 					$dateTimeObject1 = date_create($start);
 					$dateTimeObject2 = date_create($check_pause_lapse_time->lapse_time);
 					$difference = date_diff($dateTimeObject1, $dateTimeObject2);
@@ -154,9 +154,9 @@ class StartTimerVpage extends Component
 					$this->first_half_timer =  date("i:s", $calculate_first_half_timer);
 				}
 				else{
-					$collect_pause_time =  array();
+                    $collect_pause_time =  array();
 					foreach($get_pause_lapse_time as $tttt){
-						$collect_pause_time[] =  strtotime($tttt->lapse_diff);
+                        $collect_pause_time[] =  strtotime($tttt->lapse_diff);
 					}
 
 					$sum_pause = array_sum($collect_pause_time);
@@ -169,7 +169,6 @@ class StartTimerVpage extends Component
 
 				}
 
-				//dd($this->timer_content_first_half);
 			}
 			else
 			{
@@ -556,6 +555,7 @@ class StartTimerVpage extends Component
 				}
 
 			}
+            // dd($this->timer_content_first_half);
 
 		}
 		else
@@ -566,8 +566,8 @@ class StartTimerVpage extends Component
 
 		}
 
-			// Voting time
-			$finish_time = $this->match_fixture->finishdate_time;
+        // Voting time
+            $finish_time = $this->match_fixture->finishdate_time;
 			$dateTimeObject1 = date_create($finish_time);
 			$dateTimeObject2 = now();
 			$difference = date_diff($dateTimeObject1, $dateTimeObject2);
@@ -803,6 +803,7 @@ class StartTimerVpage extends Component
 			$match_fixture_lapse->lapse_type = 6;
 			$match_fixture_lapse->lapse_time = now();
 			$match_fixture_lapse->save();
+            // dd($match_fixture_lapse);
 
 			// Calculate lapse time difference
 			$get_pause_lapse_time = Match_fixture_lapse::where(['match_fixture_id' => $this->fixture_id, 'lapse_type' => 6])->orderBy('id', 'desc')->get();

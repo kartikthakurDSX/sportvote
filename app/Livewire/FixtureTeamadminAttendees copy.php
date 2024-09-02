@@ -30,7 +30,7 @@ class FixtureTeamadminAttendees extends Component
 
 	public function refresh()
     {
-		$this->emit('$refresh');
+		$this->dipatch('$refresh');
         // Your logic to refresh data goes here
         // For example, you can fetch updated data and update public properties used in the component
     }
@@ -38,7 +38,7 @@ class FixtureTeamadminAttendees extends Component
     {
         // Your logic to refresh data goes here
         // For example, you can fetch updated data and update public properties used in the component
-        $this->emit('refreshDataComplete'); // Optional: Emit an event to signal that data refresh is complete
+        $this->dipatch('refreshDataComplete'); // Optional: dipatch an event to signal that data refresh is complete
     }
 
     public function mount($match_fixture_id)
@@ -224,7 +224,7 @@ class FixtureTeamadminAttendees extends Component
 
     public function alertstopmatch()
     {
-        $this->dispatchBrowserEvent('swal:modal', [
+        $this->dispatch('swal:modal', [
 
             'message' => 'You can not enter the players stats due to match is Stoped Or Paused',
 
@@ -232,7 +232,7 @@ class FixtureTeamadminAttendees extends Component
     }
     public function alert_redcard_player()
     {
-        $this->dispatchBrowserEvent('swal:modal', [
+        $this->dispatch('swal:modal', [
 
             'message' => 'RED Card Received, No More Stats Allowed',
 
@@ -240,7 +240,7 @@ class FixtureTeamadminAttendees extends Component
     }
     public function alert_yellowcard_player()
     {
-        $this->dispatchBrowserEvent('swal:modal', [
+        $this->dispatch('swal:modal', [
 
             'message' => '2 YELLOW Card Received, No More Stats Allowed',
 

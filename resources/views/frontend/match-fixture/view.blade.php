@@ -114,6 +114,7 @@
                     <input type="hidden" id="teamTwo_id" value="{{ $teamTwo->id }}">
                     <div class="text-center match-timer-out">
                         <!-- Start button livewire -->
+                        {{-- @livewire('timer', ['match_fixture_id' => $match_fixture->id]) --}}
                         @livewire('start-timer-vpage', ['match_fixture_id' => $match_fixture->id])
                         <!-- End of Start button livewire -->
                     </div>
@@ -138,7 +139,8 @@
             @endphp
 
             @if (in_array($userId, $admins) || $userId == $competition->user_id)
-                @livewire('fixture-compadmin-attendees', ['match_fixture_id' => $match_fixture->id])
+                {{-- @livewire('fixture-compadmin-attendees', ['match_fixture_id' => $match_fixture->id]) --}}
+                @livewire('attendees', ['match_fixture_id' => $match_fixture->id])
             @elseif(in_array($userId, $team_admins_ids))
                 @livewire('fixture-teamadmin-attendees', ['match_fixture_id' => $match_fixture->id])
             @else
@@ -904,7 +906,6 @@
                                         </div>
                                     @endif
                                 @endforeach
-
                             </div>
                             <div class="mb-5 row">
                                 @foreach ($ground_map_position as $gmp)
@@ -2103,6 +2104,50 @@
         });
     });
 </script>
+
+
+{{-- <script>
+    document.addEventListener('livewire:load', function () {
+        let intervalId;
+
+        function startInterval() {
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+            intervalId = setInterval(() => {
+                Livewire.emit('updateTimer');
+            }, 1000);
+        }
+
+        Livewire.on('start-timer', function () {
+            startInterval();
+        });
+
+        Livewire.on('pause-timer', function () {
+            clearInterval(intervalId);
+        });
+
+        Livewire.on('resume-timer', function () {
+            startInterval();
+        });
+
+        // Livewire.on('start-second-timer', function () {
+        //     startInterval();
+        // });
+
+        // Livewire.on('pause-second-timer', function () {
+        //     clearInterval(intervalId);
+        // });
+
+        // Livewire.on('resume-second-timer', function () {
+        //     startInterval();
+        // });
+
+        Livewire.on('timer-ended', function () {
+            clearInterval(intervalId);
+        });
+    });
+</script> --}}
 @include('frontend.includes.searchScript')
 </body>
 

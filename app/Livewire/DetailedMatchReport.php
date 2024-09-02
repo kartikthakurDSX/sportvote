@@ -43,7 +43,7 @@ class DetailedMatchReport extends Component
         $fixture_stat_record = Match_fixture_stat::where('match_fixture_id', $this->fixture_id)
             ->where('half_type', 1)
             ->with('sport_stat', 'player', 'team')
-            ->orderBy('stat_time_record', 'DESC')
+            ->orderBy('stat_time', 'DESC')
             ->get();
 
         $fixture_stat_record_second_half = Match_fixture_stat::where('match_fixture_id', $this->fixture_id)

@@ -1,24 +1,21 @@
-<div class="row mt-4 mtopNew" wire:poll.visible.1s>
+<div class="row mt-4 mtopNew" {{ $match_fixture->fixture_type == 0 ? 'wire:poll.visible.5s' : '' }}>
     <button class="processed" wire:click="refresh">Refresh</button>
+    {{-- wire:poll.750ms --}}
     @if ($match_fixture->finishdate_time == '')
-        <div class="col-md-5 col-6 position-relative">
+        <div class="col-md-5 col-6 position-relative BorderMobil">
             @if ($fixture_squad_teamOne->isEmpty())
                 @foreach ($teamOne_attendees as $tm1)
                     <?php $team_member = App\Models\Team_member::select('jersey_number')
                         ->where('member_id', $tm1->attendee_id)
                         ->where('team_id', $teamOne->id)
                         ->first(); ?>
-                    <div class="player-jersy-list">
+                    <style>
+                        .jersy2::after {
+                            color: <?php echo $teamOne->team_color; ?>;
+                        }
+                    </style>
+                    <div class="player-jersy-list" data-bs-target="#plyrRecord" data-bs-toggle="modal">
                         <div class="jersy-img-wrap mb-2">
-                            <style>
-                                .jersy1::after {
-                                    color: <?php echo $teamOne->team_color; ?>;
-                                }
-
-                                .jersy1 {
-                                    color: <?php echo $teamOne->font_color; ?>;
-                                }
-                            </style>
                             <span class="jersy-no team-jersy-left jersy1">
                                 @if ($team_member->jersey_number)
                                     {{ $team_member->jersey_number }}
@@ -30,20 +27,19 @@
                                     src="{{ url('frontend/profile_pic') }}/{{ $tm1->player->profile_pic }}"
                                     alt="" height="100">
                             </div>
+
                         </div>
                         <div class="jersy-plyr-title d-flex">
+                            <span class="score">50</span>
                             {{ $tm1->player->first_name }} {{ $tm1->player->last_name }}
                         </div>
                     </div>
                 @endforeach
-
                 <div class="overlay-hide"></div>
-                <div class="overlay-button">
-                    <button class="btn btn-green modal_teamOne"
+                <div class="overlay-button"><button class="btn btn-green"
                         style="background-color:{{ $teamOne->team_color }}; color:{{ $teamOne->font_color }};"
-                        data-bs-toggle="modal" data-bs-target="#squadModal_teamOne" data-id="{{ $teamOne->id }}">Select
-                        Starting Lineup</button>
-                </div>
+                        data-bs-toggle="modal" data-bs-target="#squadModal_teamTwo" data-id="{{ $teamOne->id }}">Select
+                        Starting Lineup</button></div>
             @else
                 @foreach ($fixture_squad_teamOne as $tm1)
                     <?php $goal1 = App\Models\Match_fixture_stat::select('id')
@@ -72,12 +68,12 @@
                     @if ($match_fixture->startdate_time != null)
                         @if (@$fixture_lapse_type->lapse_type == 1)
                             @if ($red_card->isNotEmpty())
-                                {{-- <!--<div class="player-jersy-list" wire:click="alert_redcard_player"> --> --}}
+                                <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                                 <div class="player-jersy-list"
                                     onclick="return confirm('This player has received a red card')">
                                 @else
                                     @if ($yellow_card->count() >= 2)
-                                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player"> --> --}}
+                                        <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">-->
                                         <div class="player-jersy-list"
                                             onclick="return confirm('This player has received a 2 yellow cards')">
                                         @else
@@ -87,12 +83,12 @@
                             @endif
                         @elseif(@$fixture_lapse_type->lapse_type == 3)
                             @if ($red_card->isNotEmpty())
-                                {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                                <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                                 <div class="player-jersy-list"
                                     onclick="return confirm('This player has received a red card')">
                                 @else
                                     @if ($yellow_card->count() >= 2)
-                                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">--> --}}
+                                        <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">-->
                                         <div class="player-jersy-list"
                                             onclick="return confirm('This player has received a 2 yellow cards')">
                                         @else
@@ -102,12 +98,12 @@
                             @endif
                         @elseif(@$fixture_lapse_type->lapse_type == 5)
                             @if ($red_card->isNotEmpty())
-                                {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                                <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                                 <div class="player-jersy-list"
                                     onclick="return confirm('This player has received a red card')">
                                 @else
                                     @if ($yellow_card->count() >= 2)
-                                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">--> --}}
+                                        <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">-->
                                         <div class="player-jersy-list"
                                             onclick="return confirm('This player has received a 2 yellow cards')">
                                         @else
@@ -117,12 +113,12 @@
                             @endif
                         @elseif(@$fixture_lapse_type->lapse_type == 8)
                             @if ($red_card->isNotEmpty())
-                                {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                                <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                                 <div class="player-jersy-list"
                                     onclick="return confirm('This player has received a red card')">
                                 @else
                                     @if ($yellow_card->count() >= 2)
-                                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">--> --}}
+                                        <!-- <div class="player-jersy-list" wire:click="alert_yellowcard_player">-->
                                         <div class="player-jersy-list"
                                             onclick="return confirm('This player has received a 2 yellow cards')">
                                         @else
@@ -130,12 +126,14 @@
                                                 data-id="{{ $tm1->player_id }},{{ $teamOne->id }}">
                                     @endif
                             @endif
-                        @else
-                            @if ($match_fixture->finishdate_time != null)
-                                <div class="player-jersy-list" wire:click="alertstopmatch">
-                                @else
-                                    <div class="player-jersy-list">
-                            @endif
+                        @elseif(@$fixture_lapse_type->lapse_type == 2)
+                            <div class="player-jersy-list" wire:click="alertstopmatch">
+                            @else
+                                @if ($match_fixture->finishdate_time == null)
+                                    <div class="player-jersy-list" wire:click="alertstopmatch">
+                                    @else
+                                        <div class="player-jersy-list">
+                                @endif
                         @endif
                     @else
                         <div class="player-jersy-list">
@@ -151,7 +149,7 @@
                                 color: <?php echo $teamOne->font_color; ?>;
                             }
                         </style>
-                        <span class="jersy-no team-jersy-left jersy1">
+                        <span class="jersy-no team-jersy-right jersy1">
                             @if ($team_member->jersey_number)
                                 {{ $team_member->jersey_number }}
                             @else
@@ -176,25 +174,26 @@
                     </div>
         </div>
     @endforeach
-    @if ($match_fixture->startdate_time != null)
-        @if (@$fixture_lapse_type->lapse_type == 1 || @$fixture_lapse_type->lapse_type == 3)
-            <div class="player-jersy-list team_ownGoal" data-id="{{ $teamOne->id }}">
-        @elseif(@$fixture_lapse_type->lapse_type == 5 || @$fixture_lapse_type->lapse_type == 8)
-            <div class="player-jersy-list team_ownGoal" data-id="{{ $teamOne->id }}">
-        @elseif(@$fixture_lapse_type->lapse_type == 6 || @$fixture_lapse_type->lapse_type == 9)
-            <div class="player-jersy-list" wire:click="alertstopmatch">
-        @else
-            <div class="player-jersy-list">
-        @endif
-    @else
-        <div class="player-jersy-list">
-    @endif
-    <?php $ownGoalCount = App\Models\Match_fixture_stat::select('id')
+    <?php $ownGoalCount2 = App\Models\Match_fixture_stat::select('id')
         ->where('match_fixture_id', $match_fixture->id)
         ->where('team_id', $teamOne->id)
         ->where('player_id', 16)
         ->where('sport_stats_id', 54)
         ->get(); ?>
+    @if ($match_fixture->startdate_time != null)
+        @if (@$fixture_lapse_type->lapse_type == 1 || @$fixture_lapse_type->lapse_type == 3)
+            <div class="player-jersy-list team_ownGoal" data-id="{{ $teamOne->id }}" data-time="{{ now() }}">
+            @elseif(@$fixture_lapse_type->lapse_type == 5 || @$fixture_lapse_type->lapse_type == 8)
+                <div class="player-jersy-list team_ownGoal" data-id="{{ $teamOne->id }}"
+                    data-time="{{ now() }}">
+                @elseif(@$fixture_lapse_type->lapse_type == 6 || @$fixture_lapse_type->lapse_type == 9)
+                    <div class="player-jersy-list" wire:click="alertstopmatch">
+                    @else
+                        <div class="player-jersy-list">
+        @endif
+    @else
+        <div class="player-jersy-list">
+    @endif
     <div class="jersy-img-wrap mb-2">
         <style>
         </style>
@@ -203,8 +202,8 @@
         </div>
     </div>
     <div class="jersy-plyr-title d-flex">
-        @if ($ownGoalCount->count() != 0)
-            <span class="score"><?php echo str_pad($ownGoalCount->count(), 2, 0, STR_PAD_LEFT); ?></span>
+        @if ($ownGoalCount2->count() != 0)
+            <span class="score"><?php echo str_pad($ownGoalCount2->count(), 2, 0, STR_PAD_LEFT); ?></span>
         @else
             <span class="score01">00</span>
         @endif
@@ -213,34 +212,30 @@
         </div>
     </div>
 </div>
-
 @endif
-
-<!-- Button trigger modal -->
-
 {{-- For Substitute players --}}
+
 @if (count($subplyr1) > 0)
     <hr>
 
     <span>Substitutes</span>
     <div class="row mb-4 p-3">
+
         <div class="col-md-12 col-12 ">
 
             @foreach ($subplyr1 as $tm1)
                 <?php
-                $team_member = App\Models\Team_member::select('jersey_number')
-                    ->where('member_id', $tm1->player_id)
-                    ->where('team_id', $teamOne->id)
-                    ->first();
-
                 $goal1 = App\Models\Match_fixture_stat::select('id')
                     ->where('match_fixture_id', $match_fixture->id)
                     ->where('team_id', $teamOne->id)
-                    ->where('player_id', $tm1->player->id)
+                    ->where('player_id', $tm2->player->id)
                     ->where('sport_stats_id', 1)
                     ->get();
-                ?>
-                <div class="player-jersy-list player_score" data-id="{{ $tm1->player_id }},{{ $teamOne->id }}">
+                $team_member = App\Models\Team_member::select('jersey_number')
+                    ->where('member_id', $tm2->player_id)
+                    ->where('team_id', $teamOne->id)
+                    ->first(); ?>
+                <div class="player-jersy-list player_score" data-id="{{ $tm2->player_id }},{{ $teamOne->id }}">
                     <div class="jersy-img-wrap mb-2">
                         <style>
                             .jersy1::after {
@@ -251,14 +246,15 @@
                                 color: <?php echo $teamOne->font_color; ?>;
                             }
                         </style>
-                        <span class="jersy-no team-jersy-left jersy1">
-                            @if (!empty($team_member->jersey_number))
+                        <span class="jersy-no team-jersy-left jersy2">
+                            @if (isset($team_member->jersey_number))
                                 {{ $team_member->jersey_number }}
+                            @else
                             @endif
                         </span>
                         <div class="jersy-img">
                             <img class="img-fluid"
-                                src="{{ url('frontend/profile_pic') }}/{{ $tm1->player->profile_pic }}"
+                                src="{{ url('frontend/profile_pic') }}/{{ $tm2->player->profile_pic }}"
                                 height="100">
                         </div>
 
@@ -270,11 +266,12 @@
                             <span class="score01">00</span>
                         @endif
                         <div class="playerNme">
-                            {{ $tm1->player->first_name }} {{ $tm1->player->last_name }}
+                            {{ $tm2->player->first_name }} {{ $tm2->player->last_name }}
                         </div>
                     </div>
                 </div>
             @endforeach
+
 
         </div>
 
@@ -407,7 +404,7 @@
             @if ($match_fixture->startdate_time != null)
                 @if (@$fixture_lapse_type->lapse_type == 1)
                     @if ($red_card->isNotEmpty())
-                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                        <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                         <div class="player-jersy-list"
                             onclick="return confirm('This player has received a red card')">
                         @else
@@ -422,7 +419,7 @@
                     @endif
                 @elseif(@$fixture_lapse_type->lapse_type == 3)
                     @if ($red_card->isNotEmpty())
-                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                        <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                         <div class="player-jersy-list"
                             onclick="return confirm('This player has received a red card')">
                         @else
@@ -437,7 +434,7 @@
                     @endif
                 @elseif(@$fixture_lapse_type->lapse_type == 5)
                     @if ($red_card->isNotEmpty())
-                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                        <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                         <div class="player-jersy-list"
                             onclick="return confirm('This player has received a red card')">
                         @else
@@ -452,7 +449,7 @@
                     @endif
                 @elseif(@$fixture_lapse_type->lapse_type == 8)
                     @if ($red_card->isNotEmpty())
-                        {{-- <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">--> --}}
+                        <!-- <div class="player-jersy-list" wire:click="alert_redcard_player">-->
                         <div class="player-jersy-list"
                             onclick="return confirm('This player has received a red card')">
                         @else

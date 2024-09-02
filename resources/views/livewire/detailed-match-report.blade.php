@@ -1,4 +1,4 @@
-<div {{$match_fixture->fixture_type == 0 ? 'wire:poll.2500ms':''}}>
+<div wire:poll.2500ms>
 
     {{--  wire:poll.2s --}}
     {{-- wire:poll.750ms --}}
@@ -401,7 +401,6 @@
                                         </tr>
                                     @else
                                     @endif
-
                                     @foreach ($fixture_stat_record as $record)
                                         <?php $yellowCardCount = App\Models\Match_fixture_stat::where("match_fixture_id", $record->match_fixture_id)->where("player_id", $record->player_id)
                                             ->where("sport_stats_id", 2)->orderBy('id', 'DESC')->get();
